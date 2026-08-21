@@ -1,1432 +1,2359 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Mr. Iftekhar | Digital Marketing Expert</title>
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@600;700;800&display=swap');
-
-:root{
-  --yellow:#FFD319;
-  --darkyellow:#B88600;
-  --blue:#146CFF;
-  --darkblue:#123A70;
-  --red:#D71920;
-  --purple:#7B2CFF;
-  --orange:#FF7A00;
-  --cyan:#00A9C7;
-  --cream:#FFF8E7;
-  --lightblue:#EEF5FF;
-  --text:#17324D;
-  --muted:#3F5E78;
-}
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:"Outfit",sans-serif;
-  background:var(--cream);
-  color:var(--text);
-  overflow-x:hidden;
-  line-height:1.6;
-}
-
-a{
-  text-decoration:none;
-}
-
-img{
-  max-width:100%;
-}
-
-/* ================= TOP PROFILE ================= */
-
-.top-profile{
-  background:linear-gradient(90deg,#FFD319,#FFC107,#FFB300);
-  padding:12px 7%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-  border-bottom:4px solid var(--blue);
-}
-
-.top-name{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  flex-wrap:wrap;
-}
-
-.top-name strong{
-  font-size:24px;
-  font-weight:900;
-  color:var(--darkblue);
-}
-
-.top-title{
-  background:var(--blue);
-  color:#fff;
-  padding:6px 14px;
-  border-radius:30px;
-  font-size:14px;
-  font-weight:800;
-}
-
-.top-whatsapp{
-  background:var(--red);
-  color:#fff;
-  padding:10px 18px;
-  border-radius:12px;
-  font-weight:900;
-  box-shadow:0 8px 20px rgba(215,25,32,.25);
-  transition:.3s;
-}
-
-.top-whatsapp:hover{
-  transform:translateY(-3px);
-}
-
-/* ================= NAV ================= */
-
-nav{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:#fff;
-  padding:17px 7%;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  border-bottom:2px solid #DCE7F5;
-}
-
-.logo{
-  font-family:"Space Grotesk",sans-serif;
-  font-size:25px;
-  font-weight:900;
-  color:var(--blue);
-}
-
-.logo span{
-  color:var(--red);
-}
-
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:22px;
-}
-
-.nav-links a{
-  color:var(--darkblue);
-  font-weight:800;
-  font-size:14px;
-}
-
-.nav-links a:hover{
-  color:var(--red);
-}
-
-.nav-contact{
-  background:var(--yellow);
-  padding:9px 15px;
-  border-radius:10px;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-  min-height:680px;
-  padding:80px 7%;
-  display:flex;
-  align-items:center;
-  position:relative;
-  overflow:hidden;
-  background:
-  radial-gradient(circle at 10% 20%,rgba(255,211,25,.65),transparent 24%),
-  radial-gradient(circle at 90% 30%,rgba(20,108,255,.20),transparent 25%),
-  linear-gradient(135deg,#F5F9FF,#FFF7DE);
-}
-
-.hero-content{
-  max-width:900px;
-  position:relative;
-  z-index:2;
-}
-
-.hero-badge{
-  display:inline-block;
-  background:var(--red);
-  color:#fff;
-  padding:9px 17px;
-  border-radius:50px;
-  font-weight:900;
-  font-size:14px;
-  margin-bottom:22px;
-}
-
-.hero h1{
-  font-size:clamp(52px,8vw,100px);
-  line-height:.95;
-  letter-spacing:-3px;
-  color:var(--darkblue);
-  font-weight:900;
-}
-
-.hero h1 span{
-  color:var(--blue);
-}
-
-.hero h1 .highlight{
-  color:var(--orange);
-}
-
-.hero p{
-  max-width:750px;
-  margin:28px 0;
-  color:var(--muted);
-  font-size:19px;
-  font-weight:600;
-}
-
-.hero-buttons{
-  display:flex;
-  flex-wrap:wrap;
-  gap:14px;
-}
-
-.btn{
-  display:inline-flex;
-  justify-content:center;
-  align-items:center;
-  padding:15px 23px;
-  border-radius:14px;
-  font-weight:900;
-  transition:.3s;
-}
-
-.btn:hover{
-  transform:translateY(-4px);
-}
-
-.btn-blue{
-  background:var(--blue);
-  color:#fff;
-  box-shadow:0 12px 25px rgba(20,108,255,.25);
-}
-
-.btn-red{
-  background:var(--red);
-  color:#fff;
-}
-
-.hero-shape{
-  position:absolute;
-  border-radius:50%;
-  opacity:.8;
-}
-
-.shape-one{
-  width:170px;
-  height:170px;
-  background:var(--yellow);
-  right:8%;
-  top:13%;
-}
-
-.shape-two{
-  width:100px;
-  height:100px;
-  background:var(--purple);
-  right:25%;
-  bottom:12%;
-}
-
-.shape-three{
-  width:75px;
-  height:75px;
-  background:var(--cyan);
-  right:6%;
-  bottom:35%;
-}
-
-/* ================= GENERAL ================= */
-
-section{
-  padding:85px 7%;
-}
-
-.section-tag{
-  display:inline-block;
-  background:var(--purple);
-  color:#fff;
-  padding:8px 16px;
-  border-radius:30px;
-  font-size:13px;
-  font-weight:900;
-}
-
-.section-title{
-  margin:15px 0 35px;
-  font-size:clamp(36px,5vw,58px);
-  line-height:1;
-  font-weight:900;
-  color:var(--darkblue);
-}
-
-.container{
-  max-width:1300px;
-  margin:auto;
-}
-
-/* ================= ABOUT ================= */
-
-.about-grid{
-  display:grid;
-  grid-template-columns:1.3fr .8fr;
-  gap:28px;
-}
-
-.about-card,
-.info-card{
-  padding:35px;
-  border-radius:26px;
-  background:#fff;
-  box-shadow:0 15px 40px rgba(20,108,255,.10);
-}
-
-.about-card{
-  border-top:8px solid var(--yellow);
-}
-
-.about-card p{
-  font-size:18px;
-  color:var(--muted);
-  font-weight:600;
-}
-
-.info-card{
-  background:linear-gradient(135deg,var(--blue),var(--purple));
-  color:#fff;
-}
-
-.info-card h3{
-  color:var(--yellow);
-  font-size:27px;
-  margin-bottom:20px;
-}
-
-.info-list{
-  display:grid;
-  gap:12px;
-}
-
-.info-list div{
-  background:rgba(255,255,255,.16);
-  padding:13px;
-  border-radius:12px;
-  font-weight:700;
-}
-
-/* ================= STATS ================= */
-
-.stats{
-  margin-top:28px;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:15px;
-}
-
-.stat{
-  padding:22px;
-  border-radius:18px;
-  color:#fff;
-}
-
-.stat:nth-child(1){background:var(--blue);}
-.stat:nth-child(2){background:var(--red);}
-.stat:nth-child(3){background:var(--purple);}
-.stat:nth-child(4){background:var(--orange);}
-
-.stat h2{
-  font-size:35px;
-}
-
-.stat p{
-  color:#fff;
-  font-size:14px;
-}
-
-/* ================= EXPERIENCE ================= */
-
-.experience-section{
-  background:var(--lightblue);
-}
-
-.timeline{
-  display:grid;
-  gap:20px;
-}
-
-.job{
-  background:#fff;
-  padding:28px;
-  border-radius:22px;
-  border-left:8px solid var(--blue);
-  box-shadow:0 10px 30px rgba(23,50,77,.08);
-  transition:.3s;
-}
-
-.job:hover{
-  transform:translateX(7px);
-}
-
-.job:nth-child(2n){
-  border-left-color:var(--red);
-}
-
-.job:nth-child(3n){
-  border-left-color:var(--purple);
-}
-
-.job-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  gap:15px;
-  flex-wrap:wrap;
-}
-
-.job h3{
-  color:var(--darkblue);
-  font-size:23px;
-}
-
-.job h4{
-  color:var(--red);
-  margin-top:4px;
-}
-
-.date{
-  background:var(--yellow);
-  color:var(--darkblue);
-  padding:8px 14px;
-  border-radius:30px;
-  font-weight:900;
-}
-
-.job ul{
-  margin:18px 0 0 20px;
-  color:var(--muted);
-  font-weight:600;
-}
-
-/* ================= SKILLS ================= */
-
-.skills-section{
-  background:linear-gradient(135deg,#FFF5D6,#EEF5FF);
-}
-
-.skills-grid{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-}
-
-.skill{
-  padding:12px 18px;
-  border-radius:50px;
-  color:#fff;
-  font-weight:900;
-}
-
-.skill:nth-child(4n+1){background:var(--blue);}
-.skill:nth-child(4n+2){background:var(--red);}
-.skill:nth-child(4n+3){background:var(--purple);}
-.skill:nth-child(4n+4){background:var(--orange);}
-
-/* ================= SOCIAL MEDIA TABLE ================= */
-
-.social-section{
-  background:#FFF9E8;
-}
-
-.table-box{
-  overflow-x:auto;
-  border-radius:22px;
-  background:#fff;
-  box-shadow:0 15px 40px rgba(20,108,255,.12);
-}
-
-.social-table{
-  width:100%;
-  min-width:800px;
-  border-collapse:collapse;
-}
-
-.social-table th{
-  background:linear-gradient(90deg,var(--blue),var(--purple));
-  color:#fff;
-  padding:18px;
-  text-align:left;
-  font-weight:900;
-}
-
-.social-table td{
-  padding:18px;
-  color:var(--text);
-  font-weight:650;
-  border-bottom:1px solid #DCE7F5;
-}
-
-.social-table tr:nth-child(even){
-  background:#FFF8DE;
-}
-
-.social-table tr:hover{
-  background:#EAF3FF;
-}
-
-/* ================= PORTFOLIO ================= */
-
-.portfolio-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
-}
-
-.project{
-  background:#fff;
-  border-radius:24px;
-  overflow:hidden;
-  box-shadow:0 15px 35px rgba(23,50,77,.10);
-  transition:.35s;
-}
-
-.project:hover{
-  transform:translateY(-9px);
-}
-
-.project-top{
-  height:145px;
-  padding:25px;
-  display:flex;
-  align-items:flex-end;
-  color:#fff;
-  font-size:25px;
-  font-weight:900;
-}
-
-.project:nth-child(5n+1) .project-top{
-  background:linear-gradient(135deg,var(--blue),var(--cyan));
-}
-
-.project:nth-child(5n+2) .project-top{
-  background:linear-gradient(135deg,var(--red),var(--orange));
-}
-
-.project:nth-child(5n+3) .project-top{
-  background:linear-gradient(135deg,var(--purple),var(--blue));
-}
-
-.project:nth-child(5n+4) .project-top{
-  background:linear-gradient(135deg,var(--orange),var(--darkyellow));
-}
-
-.project:nth-child(5n) .project-top{
-  background:linear-gradient(135deg,var(--cyan),var(--purple));
-}
-
-.project-body{
-  padding:22px;
-}
-
-.project-body p{
-  color:var(--muted);
-  font-weight:600;
-  margin:10px 0 18px;
-}
-
-.project-link{
-  color:var(--red);
-  font-weight:900;
-}
-
-/* ================= EDUCATION ================= */
-
-.edu-card{
-  max-width:650px;
-  background:linear-gradient(135deg,var(--yellow),#FFBE0B);
-  padding:35px;
-  border-radius:25px;
-  box-shadow:0 15px 35px rgba(255,190,11,.25);
-}
-
-.edu-card h3{
-  color:var(--darkblue);
-  font-size:29px;
-}
-
-/* ================= CONTACT ================= */
-
-.contact{
-  background:linear-gradient(135deg,var(--blue),var(--purple));
-  color:#fff;
-  text-align:center;
-}
-
-.contact .section-title{
-  color:#fff;
-}
-
-.contact-grid{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:14px;
-}
-
-.contact-item{
-  background:rgba(255,255,255,.16);
-  color:#fff;
-  padding:15px 20px;
-  border-radius:13px;
-  font-weight:800;
-}
-
-/* ================= WHATSAPP POPUP ================= */
-
-.whatsapp-popup{
-  position:fixed;
-  right:22px;
-  bottom:22px;
-  width:330px;
-  padding:24px;
-  border-radius:24px;
-  background:linear-gradient(135deg,var(--blue),var(--purple));
-  color:#fff;
-  z-index:9999;
-  box-shadow:0 20px 50px rgba(20,108,255,.35);
-  transform:translateY(160%);
-  transition:.6s ease;
-}
-
-.whatsapp-popup.show{
-  transform:translateY(0);
-}
-
-.popup-close{
-  position:absolute;
-  top:8px;
-  right:13px;
-  background:transparent;
-  border:0;
-  color:#fff;
-  font-size:27px;
-  cursor:pointer;
-}
-
-.popup-icon{
-  font-size:42px;
-}
-
-.whatsapp-popup h3{
-  color:var(--yellow);
-  font-size:25px;
-  margin:8px 0;
-}
-
-.whatsapp-popup p{
-  color:#fff;
-  font-weight:600;
-  margin-bottom:18px;
-}
-
-.popup-btn{
-  display:block;
-  background:var(--yellow);
-  color:var(--darkblue);
-  text-align:center;
-  padding:13px;
-  border-radius:12px;
-  font-weight:900;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-  background:linear-gradient(90deg,var(--red),var(--purple),var(--blue));
-  color:#fff;
-  padding:25px;
-  text-align:center;
-  font-weight:800;
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:900px){
-
-  .nav-links{
-    display:none;
-  }
-
-  .about-grid{
-    grid-template-columns:1fr;
-  }
-
-  .portfolio-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .stats{
-    grid-template-columns:repeat(2,1fr);
-  }
-}
-
-@media(max-width:600px){
-
-  .top-profile{
-    flex-direction:column;
-    text-align:center;
-  }
-
-  .top-name{
-    justify-content:center;
-  }
-
-  section,
-  .hero{
-    padding:65px 6%;
-  }
-
-  .portfolio-grid,
-  .stats{
-    grid-template-columns:1fr;
-  }
-
-  .whatsapp-popup{
-    width:calc(100% - 30px);
-    right:15px;
-    bottom:15px;
-  }
-
-  .hero h1{
-    letter-spacing:-2px;
-  }
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ghar Ka Tiffin | Fresh Homemade Food in Mumbai</title>
+  <meta
+    name="description"
+    content="Fresh, homemade and hygienic tiffin service in Dadar, Wadala, Sewri and Sion."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --primary: #e85d04;
+      --primary-dark: #c94d00;
+      --secondary: #2d6a4f;
+      --cream: #fffaf2;
+      --light: #fff3df;
+      --dark: #20201d;
+      --muted: #6d6a63;
+      --white: #ffffff;
+      --border: #eee4d5;
+      --shadow: 0 15px 45px rgba(48, 35, 20, 0.09);
+      --radius: 20px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--dark);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(1160px, 92%);
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background: rgba(255, 250, 242, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(238, 228, 213, 0.7);
+    }
+
+    .nav {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 22px;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      font-size: 22px;
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      list-style: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      transition: 0.25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-order {
+      background: var(--primary);
+      color: white !important;
+      padding: 12px 20px;
+      border-radius: 100px;
+    }
+
+    .nav-order:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: none;
+      font-size: 27px;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 720px;
+      padding-top: 150px;
+      padding-bottom: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      background: #ffe6c4;
+      right: -160px;
+      top: 100px;
+      z-index: -1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #e7f3ec;
+      color: var(--secondary);
+      padding: 9px 14px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(46px, 6vw, 76px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .hero-text {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 570px;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      padding: 15px 23px;
+      border-radius: 100px;
+      font-weight: 700;
+      transition: 0.25s;
+    }
+
+    .btn-primary {
+      color: white;
+      background: var(--primary);
+      box-shadow: 0 10px 25px rgba(232, 93, 4, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      background: white;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .hero-food {
+      position: relative;
+    }
+
+    .food-card {
+      background: white;
+      border-radius: 35px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      transform: rotate(2deg);
+    }
+
+    .food-image {
+      height: 470px;
+      border-radius: 27px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 35px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 30% 25%, #ffe9bf, transparent 30%),
+        linear-gradient(145deg, #d66b21, #8b3e13);
+    }
+
+    .thali {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 50% 50%, #fff 0 38%, transparent 39%),
+        radial-gradient(circle at 30% 30%, #f6c453 0 8%, transparent 9%),
+        radial-gradient(circle at 70% 35%, #64a34b 0 9%, transparent 10%),
+        radial-gradient(circle at 65% 70%, #d65336 0 9%, transparent 10%),
+        radial-gradient(circle at 30% 68%, #8d5a38 0 8%, transparent 9%),
+        #e9d8bd;
+      border: 16px solid #f4ead9;
+      box-shadow:
+        0 20px 40px rgba(0,0,0,.25),
+        inset 0 0 0 5px #d5bea0;
+      position: relative;
+    }
+
+    .thali::after {
+      content: "🍚  🥘  🫓  🥗";
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      bottom: -58px;
+      left: 0;
+      font-size: 25px;
+      letter-spacing: 5px;
+    }
+
+    .floating-card {
+      position: absolute;
+      background: white;
+      border-radius: 17px;
+      padding: 14px 18px;
+      box-shadow: var(--shadow);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .floating-card.one {
+      left: -30px;
+      top: 80px;
+    }
+
+    .floating-card.two {
+      right: -25px;
+      bottom: 60px;
+    }
+
+    /* =========================
+       TRUST BAR
+    ========================== */
+
+    .trust-bar {
+      background: var(--secondary);
+      color: white;
+      padding: 24px 0;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .trust-icon {
+      font-size: 27px;
+    }
+
+    .trust-item strong {
+      display: block;
+      font-size: 15px;
+    }
+
+    .trust-item small {
+      opacity: .75;
+    }
+
+    /* =========================
+       COMMON SECTIONS
+    ========================== */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 55px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      color: var(--primary);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(34px, 4vw, 50px);
+      line-height: 1.15;
+      margin-bottom: 15px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    /* =========================
+       TODAY'S MENU
+    ========================== */
+
+    .menu-section {
+      background: white;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .menu-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px;
+      background: var(--cream);
+      transition: .3s;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow);
+    }
+
+    .menu-top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+
+    .menu-emoji {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      background: #fff;
+      border-radius: 15px;
+      font-size: 30px;
+    }
+
+    .tag {
+      height: fit-content;
+      background: #e5f4e9;
+      color: #2f734d;
+      border-radius: 50px;
+      padding: 6px 10px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .menu-card h3 {
+      margin-bottom: 8px;
+      font-size: 19px;
+    }
+
+    .menu-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       PLANS
+    ========================== */
+
+    .plans {
+      background: #fff7ea;
+    }
+
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .plan {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      padding: 32px;
+      position: relative;
+    }
+
+    .plan.featured {
+      border: 2px solid var(--primary);
+      transform: scale(1.03);
+      box-shadow: var(--shadow);
+    }
+
+    .popular {
+      position: absolute;
+      top: -14px;
+      right: 25px;
+      background: var(--primary);
+      color: white;
+      padding: 6px 13px;
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .plan h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-size: 38px;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 15px 0 22px;
+    }
+
+    .price span {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .features {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+
+    .features li {
+      padding: 8px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .features li::before {
+      content: "✓";
+      color: var(--secondary);
+      font-weight: 800;
+      margin-right: 10px;
+    }
+
+    .plan .btn {
+      width: 100%;
+    }
+
+    /* =========================
+       SUBSCRIPTION
+    ========================== */
+
+    .subscription {
+      background: var(--secondary);
+      color: white;
+    }
+
+    .subscription-box {
+      display: grid;
+      grid-template-columns: 1fr .8fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .subscription h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .subscription p {
+      opacity: .8;
+      max-width: 570px;
+      margin-bottom: 25px;
+    }
+
+    .subscription .btn-primary {
+      background: white;
+      color: var(--secondary);
+    }
+
+    .subscription-card {
+      background: white;
+      color: var(--dark);
+      padding: 30px;
+      border-radius: 25px;
+      box-shadow: 0 20px 50px rgba(0,0,0,.2);
+    }
+
+    .subscription-card h3 {
+      margin-bottom: 20px;
+      font-family: "Playfair Display", serif;
+      font-size: 26px;
+    }
+
+    .subscription-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    /* =========================
+       AREAS
+    ========================== */
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .area {
+      padding: 30px 20px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      text-align: center;
+      transition: .25s;
+    }
+
+    .area:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-5px);
+    }
+
+    .area-icon {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .area h3 {
+      font-size: 18px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-visual {
+      min-height: 450px;
+      background:
+        linear-gradient(rgba(45,106,79,.1), rgba(45,106,79,.1)),
+        #e5efe9;
+      border-radius: 30px;
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+    }
+
+    .kitchen-circle {
+      width: 260px;
+      height: 260px;
+      background: white;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 100px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-content h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 48px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .about-content > p {
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .check-list {
+      list-style: none;
+    }
+
+    .check-list li {
+      margin: 12px 0;
+      font-weight: 600;
+    }
+
+    .check-list li span {
+      display: inline-grid;
+      place-items: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #e3f2e8;
+      color: var(--secondary);
+      margin-right: 9px;
+    }
+
+    /* =========================
+       HOW IT WORKS
+    ========================== */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .step {
+      text-align: center;
+      padding: 35px 25px;
+    }
+
+    .step-number {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--primary);
+      color: white;
+      margin: 0 auto 20px;
+      font-size: 21px;
+      font-weight: 800;
+    }
+
+    .step h3 {
+      margin-bottom: 10px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       REVIEWS
+    ========================== */
+
+    .reviews {
+      background: #fff7ea;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .review {
+      background: white;
+      padding: 28px;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+    }
+
+    .stars {
+      color: #f4a261;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+    }
+
+    .review p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .customer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .avatar {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #ffe4bd;
+      font-weight: 800;
+    }
+
+    .customer strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .customer small {
+      color: var(--muted);
+    }
+
+    /* =========================
+       FAQ
+    ========================== */
+
+    .faq-container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 20px 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-item.active .plus {
+      transform: rotate(45deg);
+    }
+
+    .plus {
+      font-size: 24px;
+      transition: .25s;
+    }
+
+    /* =========================
+       CONTACT / ORDER
+    ========================== */
+
+    .contact {
+      background: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 45px;
+    }
+
+    .contact-info {
+      padding: 20px 0;
+    }
+
+    .contact-info h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 48px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .contact-info > p {
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 14px;
+      margin: 18px 0;
+    }
+
+    .contact-icon {
+      width: 42px;
+      height: 42px;
+      background: #fff1df;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+    }
+
+    .contact-item small {
+      color: var(--muted);
+    }
+
+    .order-form {
+      background: var(--cream);
+      padding: 32px;
+      border-radius: 25px;
+      border: 1px solid var(--border);
+    }
+
+    .order-form h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      background: white;
+      padding: 13px 14px;
+      border-radius: 11px;
+      font: inherit;
+      outline: none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--primary);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .order-form .btn {
+      width: 100%;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #1d2e27;
+      color: white;
+      padding: 60px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 45px;
+    }
+
+    .footer-logo {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    .footer-logo span {
+      color: #ff8534;
+    }
+
+    footer p,
+    footer a {
+      color: rgba(255,255,255,.65);
+      font-size: 14px;
+    }
+
+    footer h4 {
+      margin-bottom: 15px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin: 9px 0;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding-top: 20px;
+      color: rgba(255,255,255,.5);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    /* =========================
+       WHATSAPP FLOAT
+    ========================== */
+
+    .whatsapp {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      z-index: 900;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25d366;
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 29px;
+      box-shadow: 0 10px 25px rgba(37,211,102,.3);
+      transition: .25s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    /* =========================
+       TOAST
+    ========================== */
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 30px;
+      transform: translate(-50%, 100px);
+      background: #222;
+      color: white;
+      padding: 13px 20px;
+      border-radius: 50px;
+      font-size: 14px;
+      z-index: 2000;
+      transition: .35s;
+    }
+
+    .toast.show {
+      transform: translate(-50%, 0);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 900px) {
+      .nav-links {
+        position: absolute;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        background: var(--cream);
+        flex-direction: column;
+        padding: 25px;
+        gap: 18px;
+        display: none;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .subscription-box,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 120px;
+      }
+
+      .hero-food {
+        max-width: 600px;
+        margin: auto;
+      }
+
+      .menu-grid,
+      .plans-grid,
+      .reviews-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .areas-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 70px 0;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-bottom: 60px;
+      }
+
+      .hero h1 {
+        font-size: 47px;
+      }
+
+      .hero-text {
+        font-size: 16px;
+      }
+
+      .food-image {
+        height: 350px;
+      }
+
+      .thali {
+        width: 245px;
+        height: 245px;
+      }
+
+      .floating-card.one {
+        left: -5px;
+      }
+
+      .floating-card.two {
+        right: -5px;
+      }
+
+      .menu-grid,
+      .plans-grid,
+      .reviews-grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .plan.featured {
+        transform: none;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .trust-item {
+        align-items: flex-start;
+      }
+
+      .areas-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-content h2,
+      .contact-info h2 {
+        font-size: 39px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-order {
+        padding: 10px 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- TOP PROFILE -->
+  <!-- =========================
+       HEADER
+  ========================== -->
 
-<div class="top-profile">
+  <header>
+    <div class="container nav">
 
-  <div class="top-name">
-    <strong>Mr. IFTEKHAR</strong>
-    <span class="top-title">Digital Marketing Expert</span>
-  </div>
+      <a href="#home" class="logo">
+        <div class="logo-icon">🍱</div>
+        Ghar Ka <span>Tiffin</span>
+      </a>
 
-  <a href="https://wa.me/9181281177882" class="top-whatsapp" target="_blank">
-    💬 WhatsApp: 81281177882
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#menu">Today's Menu</a></li>
+        <li><a href="#plans">Tiffin Plans</a></li>
+        <li><a href="#subscription">Subscription</a></li>
+        <li><a href="#areas">Service Areas</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a class="nav-order" href="#order">Order Now</a>
+        </li>
+      </ul>
+
+    </div>
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <main id="home">
+
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+
+          <div class="badge">
+            🏠 Homemade • Fresh • Hygienic
+          </div>
+
+          <h1>
+            Ghar Jaisa Khana,
+            <span>Roz Aapke Ghar.</span>
+          </h1>
+
+          <p class="hero-text">
+            Freshly cooked, homestyle meals prepared with love and delivered
+            hot to your doorstep across Dadar, Wadala, Sewri & Sion.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#order" class="btn btn-primary">
+              🍱 Order Today's Tiffin
+            </a>
+
+            <a href="#plans" class="btn btn-outline">
+              View Tiffin Plans →
+            </a>
+          </div>
+
+        </div>
+
+        <div class="hero-food">
+
+          <div class="food-card">
+            <div class="food-image">
+              <div class="thali"></div>
+            </div>
+          </div>
+
+          <div class="floating-card one">
+            ⭐ 4.9/5 Customer Rating
+          </div>
+
+          <div class="floating-card two">
+            🥘 Freshly Cooked Daily
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TRUST BAR -->
+
+    <div class="trust-bar">
+      <div class="container trust-grid">
+
+        <div class="trust-item">
+          <div class="trust-icon">🥘</div>
+          <div>
+            <strong>Freshly Cooked</strong>
+            <small>Every single day</small>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">🧼</div>
+          <div>
+            <strong>Hygienic Kitchen</strong>
+            <small>Clean & safe cooking</small>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">🚴</div>
+          <div>
+            <strong>Quick Delivery</strong>
+            <small>Hot at your doorstep</small>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">❤️</div>
+          <div>
+            <strong>Made With Love</strong>
+            <small>Just like home</small>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- =========================
+         TODAY'S MENU
+    ========================== -->
+
+    <section class="menu-section" id="menu">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">Today's Menu</div>
+
+          <h2>
+            What's Cooking Today?
+          </h2>
+
+          <p>
+            Simple, comforting food made fresh every morning.
+          </p>
+        </div>
+
+
+        <div class="menu-grid">
+
+          <div class="menu-card">
+            <div class="menu-top">
+              <div class="menu-emoji">🍚</div>
+              <span class="tag">VEG</span>
+            </div>
+
+            <h3>Dal Tadka & Jeera Rice</h3>
+
+            <p>
+              Yellow dal, jeera rice, seasonal sabzi,
+              4 rotis & fresh salad.
+            </p>
+          </div>
+
+
+          <div class="menu-card">
+            <div class="menu-top">
+              <div class="menu-emoji">🥘</div>
+              <span class="tag">POPULAR</span>
+            </div>
+
+            <h3>Paneer Masala Thali</h3>
+
+            <p>
+              Paneer masala, dal, 4 rotis, rice,
+              salad & homemade pickle.
+            </p>
+          </div>
+
+
+          <div class="menu-card">
+            <div class="menu-top">
+              <div class="menu-emoji">🫓</div>
+              <span class="tag">VEG</span>
+            </div>
+
+            <h3>Mix Veg & Roti</h3>
+
+            <p>
+              Seasonal mixed vegetables, dal,
+              5 rotis, rice & salad.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         TIFFIN PLANS
+    ========================== -->
+
+    <section class="plans" id="plans">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">Tiffin Plans</div>
+
+          <h2>
+            Choose Your Perfect Tiffin
+          </h2>
+
+          <p>
+            Flexible plans for students, professionals and families.
+          </p>
+        </div>
+
+
+        <div class="plans-grid">
+
+          <div class="plan">
+
+            <h3>Mini Tiffin</h3>
+
+            <p>Perfect for light lunch.</p>
+
+            <div class="price">
+              ₹89 <span>/ meal</span>
+            </div>
+
+            <ul class="features">
+              <li>4 Rotis</li>
+              <li>1 Seasonal Sabzi</li>
+              <li>Dal</li>
+              <li>Fresh Salad</li>
+            </ul>
+
+            <a href="#order" class="btn btn-outline">
+              Choose Plan
+            </a>
+
+          </div>
+
+
+          <div class="plan featured">
+
+            <div class="popular">
+              MOST POPULAR
+            </div>
+
+            <h3>Regular Tiffin</h3>
+
+            <p>Our complete everyday meal.</p>
+
+            <div class="price">
+              ₹119 <span>/ meal</span>
+            </div>
+
+            <ul class="features">
+              <li>4 Rotis</li>
+              <li>2 Seasonal Sabzis</li>
+              <li>Dal</li>
+              <li>Rice</li>
+              <li>Fresh Salad & Pickle</li>
+            </ul>
+
+            <a href="#order" class="btn btn-primary">
+              Choose Plan
+            </a>
+
+          </div>
+
+
+          <div class="plan">
+
+            <h3>Premium Tiffin</h3>
+
+            <p>A little extra for special days.</p>
+
+            <div class="price">
+              ₹149 <span>/ meal</span>
+            </div>
+
+            <ul class="features">
+              <li>5 Rotis</li>
+              <li>2 Special Sabzis</li>
+              <li>Dal</li>
+              <li>Rice</li>
+              <li>Sweet / Dessert</li>
+              <li>Salad & Pickle</li>
+            </ul>
+
+            <a href="#order" class="btn btn-outline">
+              Choose Plan
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         MONTHLY SUBSCRIPTION
+    ========================== -->
+
+    <section class="subscription" id="subscription">
+
+      <div class="container subscription-box">
+
+        <div>
+
+          <div class="eyebrow" style="color:#ffb16e;">
+            Monthly Subscription
+          </div>
+
+          <h2>
+            Don't Order Every Day.
+            Just Subscribe.
+          </h2>
+
+          <p>
+            Get your daily home-style meals automatically delivered.
+            Save money, save time and never worry about lunch again.
+          </p>
+
+          <a href="#order" class="btn btn-primary">
+            Start Monthly Plan →
+          </a>
+
+        </div>
+
+
+        <div class="subscription-card">
+
+          <h3>Regular Monthly Plan</h3>
+
+          <div class="subscription-row">
+            <span>Meals</span>
+            <strong>26 Lunches</strong>
+          </div>
+
+          <div class="subscription-row">
+            <span>Daily Tiffin</span>
+            <strong>₹109 / meal</strong>
+          </div>
+
+          <div class="subscription-row">
+            <span>Delivery</span>
+            <strong>Included</strong>
+          </div>
+
+          <div class="subscription-row">
+            <span>Pause Plan</span>
+            <strong>Yes</strong>
+          </div>
+
+          <div class="price">
+            ₹2,834 <span>/ month</span>
+          </div>
+
+          <a href="#order" class="btn btn-primary" style="width:100%;">
+            Subscribe Now
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICE AREAS
+    ========================== -->
+
+    <section id="areas">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">Service Areas</div>
+
+          <h2>
+            Delivered Around Your Neighbourhood
+          </h2>
+
+          <p>
+            Currently serving selected areas in Central Mumbai.
+          </p>
+        </div>
+
+
+        <div class="areas-grid">
+
+          <div class="area">
+            <div class="area-icon">📍</div>
+            <h3>Dadar</h3>
+          </div>
+
+          <div class="area">
+            <div class="area-icon">📍</div>
+            <h3>Wadala</h3>
+          </div>
+
+          <div class="area">
+            <div class="area-icon">📍</div>
+            <h3>Sewri</h3>
+          </div>
+
+          <div class="area">
+            <div class="area-icon">📍</div>
+            <h3>Sion</h3>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="about" id="about">
+
+      <div class="container about-grid">
+
+        <div class="about-visual">
+          <div class="kitchen-circle">
+            👩‍🍳
+          </div>
+        </div>
+
+
+        <div class="about-content">
+
+          <div class="eyebrow">
+            About Our Kitchen
+          </div>
+
+          <h2>
+            Food That Feels Like Home.
+          </h2>
+
+          <p>
+            We started our tiffin service with one simple idea —
+            people living away from home deserve food that tastes
+            like it was cooked in their own kitchen.
+          </p>
+
+          <p>
+            Our meals are prepared in small batches using fresh
+            ingredients, traditional recipes and lots of care.
+          </p>
+
+          <ul class="check-list">
+            <li><span>✓</span> Fresh vegetables & ingredients</li>
+            <li><span>✓</span> No unnecessary preservatives</li>
+            <li><span>✓</span> Clean & hygienic preparation</li>
+            <li><span>✓</span> Balanced everyday meals</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         HOW IT WORKS
+    ========================== -->
+
+    <section id="how">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            How It Works
+          </div>
+
+          <h2>
+            Your Lunch, Made Easy
+          </h2>
+
+          <p>
+            Three simple steps and your home-style meal is on the way.
+          </p>
+
+        </div>
+
+
+        <div class="steps">
+
+          <div class="step">
+
+            <div class="step-number">
+              1
+            </div>
+
+            <h3>Choose Your Plan</h3>
+
+            <p>
+              Select a one-time tiffin or monthly subscription.
+            </p>
+
+          </div>
+
+
+          <div class="step">
+
+            <div class="step-number">
+              2
+            </div>
+
+            <h3>Place Your Order</h3>
+
+            <p>
+              Tell us your delivery location and preferred time.
+            </p>
+
+          </div>
+
+
+          <div class="step">
+
+            <div class="step-number">
+              3
+            </div>
+
+            <h3>Enjoy Your Meal</h3>
+
+            <p>
+              We cook fresh and deliver your meal hot to your door.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         REVIEWS
+    ========================== -->
+
+    <section class="reviews" id="reviews">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            Customer Reviews
+          </div>
+
+          <h2>
+            Loved By Our Customers
+          </h2>
+
+          <p>
+            Real food. Real people. Real love.
+          </p>
+
+        </div>
+
+
+        <div class="reviews-grid">
+
+          <div class="review">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <p>
+              "Finally found a tiffin that actually tastes
+              homemade. The dal and rotis are excellent!"
+            </p>
+
+            <div class="customer">
+              <div class="avatar">RS</div>
+              <div>
+                <strong>Rahul S.</strong>
+                <small>Dadar</small>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="review">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <p>
+              "Very consistent quality. I have been ordering
+              the monthly plan and it has made office lunches
+              so much easier."
+            </p>
+
+            <div class="customer">
+              <div class="avatar">PN</div>
+              <div>
+                <strong>Priya N.</strong>
+                <small>Sion</small>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="review">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <p>
+              "Simple ghar ka khana, exactly what I was looking
+              for. Delivery is also reliable."
+            </p>
+
+            <div class="customer">
+              <div class="avatar">AK</div>
+              <div>
+                <strong>Amit K.</strong>
+                <small>Wadala</small>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FAQ
+    ========================== -->
+
+    <section id="faq">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            FAQ
+          </div>
+
+          <h2>
+            Frequently Asked Questions
+          </h2>
+
+        </div>
+
+
+        <div class="faq-container">
+
+          <div class="faq-item">
+
+            <div class="faq-question">
+              <span>Do you deliver every day?</span>
+              <span class="plus">+</span>
+            </div>
+
+            <div class="faq-answer">
+              Yes. Our regular service operates on scheduled
+              delivery days. Delivery timings depend on your
+              selected area and plan.
+            </div>
+
+          </div>
+
+
+          <div class="faq-item">
+
+            <div class="faq-question">
+              <span>Can I order just one tiffin?</span>
+              <span class="plus">+</span>
+            </div>
+
+            <div class="faq-answer">
+              Yes. You can order a single meal without taking
+              a monthly subscription.
+            </div>
+
+          </div>
+
+
+          <div class="faq-item">
+
+            <div class="faq-question">
+              <span>Can I pause my monthly subscription?</span>
+              <span class="plus">+</span>
+            </div>
+
+            <div class="faq-answer">
+              Yes. Please contact us in advance and we can
+              pause your subscription according to our
+              service policy.
+            </div>
+
+          </div>
+
+
+          <div class="faq-item">
+
+            <div class="faq-question">
+              <span>Do you offer Jain food?</span>
+              <span class="plus">+</span>
+            </div>
+
+            <div class="faq-answer">
+              Jain meal availability can be configured based
+              on the day's menu. Please contact us before ordering.
+            </div>
+
+          </div>
+
+
+          <div class="faq-item">
+
+            <div class="faq-question">
+              <span>How do I place an order?</span>
+              <span class="plus">+</span>
+            </div>
+
+            <div class="faq-answer">
+              Fill the order form below or contact us directly
+              on WhatsApp.
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT + ORDER
+    ========================== -->
+
+    <section class="contact" id="contact">
+
+      <div class="container contact-grid">
+
+        <div class="contact-info">
+
+          <div class="eyebrow">
+            Contact / WhatsApp
+          </div>
+
+          <h2>
+            Ready For Your First Tiffin?
+          </h2>
+
+          <p>
+            Place your order today and enjoy simple,
+            fresh and comforting homemade food.
+          </p>
+
+
+          <div class="contact-item">
+
+            <div class="contact-icon">
+              📱
+            </div>
+
+            <div>
+              <strong>WhatsApp</strong>
+              <small>+91 98765 43210</small>
+            </div>
+
+          </div>
+
+
+          <div class="contact-item">
+
+            <div class="contact-icon">
+              📧
+            </div>
+
+            <div>
+              <strong>Email</strong>
+              <small>hello@gharkatiffin.in</small>
+            </div>
+
+          </div>
+
+
+          <div class="contact-item">
+
+            <div class="contact-icon">
+              🕐
+            </div>
+
+            <div>
+              <strong>Order Timing</strong>
+              <small>10:00 AM – 8:00 PM</small>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="order-form" id="order">
+
+          <h3>
+            Place Your Order
+          </h3>
+
+          <form id="orderForm">
+
+            <div class="form-row">
+
+              <div class="form-group">
+                <label for="name">
+                  Your Name
+                </label>
+
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+
+
+              <div class="form-group">
+                <label for="phone">
+                  Phone Number
+                </label>
+
+                <input
+                  id="phone"
+                  type="tel"
+                  placeholder="98765 43210"
+                  required
+                />
+              </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label for="plan">
+                  Select Plan
+                </label>
+
+                <select id="plan" required>
+
+                  <option value="">
+                    Choose a plan
+                  </option>
+
+                  <option>
+                    Mini Tiffin - ₹89
+                  </option>
+
+                  <option>
+                    Regular Tiffin - ₹119
+                  </option>
+
+                  <option>
+                    Premium Tiffin - ₹149
+                  </option>
+
+                  <option>
+                    Monthly Subscription
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="area">
+                  Delivery Area
+                </label>
+
+                <select id="area" required>
+
+                  <option value="">
+                    Select area
+                  </option>
+
+                  <option>Dadar</option>
+                  <option>Wadala</option>
+                  <option>Sewri</option>
+                  <option>Sion</option>
+
+                </select>
+
+              </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="address">
+                Delivery Address
+              </label>
+
+              <input
+                id="address"
+                type="text"
+                placeholder="Flat / Building / Street"
+                required
+              />
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="message">
+                Special Request
+              </label>
+
+              <textarea
+                id="message"
+                placeholder="Jain / less spicy / other request..."
+              ></textarea>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="btn btn-primary"
+            >
+              Confirm Order →
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <div class="footer-logo">
+            🍱 Ghar Ka <span>Tiffin</span>
+          </div>
+
+          <p>
+            Fresh homemade meals delivered across
+            Dadar, Wadala, Sewri & Sion.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h4>Quick Links</h4>
+
+          <ul class="footer-links">
+            <li><a href="#menu">Today's Menu</a></li>
+            <li><a href="#plans">Tiffin Plans</a></li>
+            <li><a href="#subscription">Subscription</a></li>
+            <li><a href="#areas">Service Areas</a></li>
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h4>Company</h4>
+
+          <ul class="footer-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#how">How It Works</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h4>Contact</h4>
+
+          <ul class="footer-links">
+            <li><a href="#contact">WhatsApp</a></li>
+            <li><a href="#contact">Call Us</a></li>
+            <li><a href="#order">Order Now</a></li>
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+        © 2026 Ghar Ka Tiffin. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- WHATSAPP -->
+
+  <a
+    href="https://wa.me/919876543210?text=Hi%20Ghar%20Ka%20Tiffin,%20I%20want%20to%20order%20a%20tiffin."
+    class="whatsapp"
+    target="_blank"
+    aria-label="WhatsApp"
+  >
+    ☎
   </a>
 
-</div>
 
-<!-- NAVIGATION -->
-
-<nav>
-
-  <a href="#" class="logo">
-    IFTE<span>KHAR</span>
-  </a>
-
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#social">Social Work</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#contact" class="nav-contact">Contact</a>
+  <div class="toast" id="toast">
+    Thank you! We'll contact you shortly.
   </div>
 
-</nav>
 
-<!-- HERO -->
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
 
-<section class="hero">
+  <script>
 
-<div class="hero-content">
+    /* Mobile Menu */
 
-  <div class="hero-badge">
-    DIGITAL MARKETING • SEO • AI • WEBSITE DEVELOPMENT
-  </div>
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
 
-  <h1>
-    MR.<br>
-    <span>IFTEKHAR.</span><br>
-    <span class="highlight">DIGITAL EXPERT</span>
-  </h1>
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
 
-  <p>
-    Digital Marketing Professional and Trainer with 8+ years of IT experience
-    across SEO, digital marketing, training, website development, social media,
-    AI tools, WordPress, coding, hosting and ChatGPT workflows.
-  </p>
 
-  <div class="hero-buttons">
+    /* Close mobile menu */
 
-    <a href="#portfolio" class="btn btn-blue">
-      VIEW MY PORTFOLIO ↓
-    </a>
+    document.querySelectorAll(".nav-links a").forEach(link => {
 
-    <a href="https://wa.me/9181281177882" target="_blank" class="btn btn-red">
-      💬 CHAT ON WHATSAPP
-    </a>
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
 
-  </div>
+    });
 
-</div>
 
-<div class="hero-shape shape-one"></div>
-<div class="hero-shape shape-two"></div>
-<div class="hero-shape shape-three"></div>
+    /* FAQ */
 
-</section>
+    document.querySelectorAll(".faq-question").forEach(question => {
 
-<!-- ABOUT -->
+      question.addEventListener("click", () => {
 
-<section id="about">
+        const item = question.parentElement;
 
-<div class="container">
+        document.querySelectorAll(".faq-item").forEach(other => {
 
-<span class="section-tag">ABOUT ME</span>
+          if (other !== item) {
+            other.classList.remove("active");
+          }
 
-<h2 class="section-title">
-Digital Marketing + AI + Technology
-</h2>
+        });
 
-<div class="about-grid">
+        item.classList.toggle("active");
 
-<div class="about-card">
+      });
 
-<p>
-Digital Marketing professional and trainer with 8+ years of IT experience
-across SEO, digital marketing, training, website development, social media
-and AI tools.
-</p>
+    });
 
-<br>
 
-<p>
-Practical experience in SEO, ASO, paid advertising, content creation,
-analytics, WordPress/WooCommerce, coding, live hosting and ChatGPT workflows.
-</p>
+    /* Order Form */
 
-<div class="stats">
+    const orderForm = document.getElementById("orderForm");
+    const toast = document.getElementById("toast");
 
-<div class="stat">
-<h2>8+</h2>
-<p>Years Experience</p>
-</div>
+    orderForm.addEventListener("submit", function(event) {
 
-<div class="stat">
-<h2>11+</h2>
-<p>Live Projects</p>
-</div>
+      event.preventDefault();
 
-<div class="stat">
-<h2>SEO</h2>
-<p>Core Expertise</p>
-</div>
+      toast.classList.add("show");
 
-<div class="stat">
-<h2>AI</h2>
-<p>Modern Tools</p>
-</div>
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 3500);
 
-</div>
+      orderForm.reset();
 
-</div>
+    });
 
-<div class="info-card">
 
-<h3>Professional Details</h3>
+    /* Header shadow on scroll */
 
-<div class="info-list">
+    window.addEventListener("scroll", () => {
 
-<div>📍 Mumbai, Maharashtra, India</div>
+      const header = document.querySelector("header");
 
-<div>📱 81281177882</div>
+      if (window.scrollY > 20) {
+        header.style.boxShadow =
+          "0 5px 25px rgba(0,0,0,.06)";
+      } else {
+        header.style.boxShadow = "none";
+      }
 
-<div>📧 iftekhar1708@gmail.com</div>
+    });
 
-<div>💼 Digital Marketing Expert</div>
-
-<div>🌐 SEO • AI • Web Development</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- EXPERIENCE -->
-
-<section id="experience" class="experience-section">
-
-<div class="container">
-
-<span class="section-tag">CAREER JOURNEY</span>
-
-<h2 class="section-title">
-Professional Experience
-</h2>
-
-<div class="timeline">
-
-<div class="job">
-
-<div class="job-head">
-
-<div>
-<h3>Define Digital – Ghatkopar</h3>
-<h4>Freelancer – Website & Digital Marketing</h4>
-</div>
-
-<div class="date">Jun 2026 – Currently</div>
-
-</div>
-
-<ul>
-<li>Website work, WordPress, coding and live hosting.</li>
-<li>Website SEO, Social Media, AI and ChatGPT prompt work.</li>
-</ul>
-
-</div>
-
-<div class="job">
-
-<div class="job-head">
-
-<div>
-<h3>Net Tech India – Thane</h3>
-<h4>Digital Marketing / SEO</h4>
-</div>
-
-<div class="date">Aug 2025 – May 2026</div>
-
-</div>
-
-<ul>
-<li>On-page SEO and Off-page SEO.</li>
-<li>Meta Ads, Google Ads, ChatGPT prompting, Canva, WooCommerce and Content Creation.</li>
-</ul>
-
-</div>
-
-<div class="job">
-
-<div class="job-head">
-
-<div>
-<h3>Kerti & Web AI Academy – Thane</h3>
-<h4>Digital Marketing Trainer</h4>
-</div>
-
-<div class="date">Jan 2025 – Jul 2025</div>
-
-</div>
-
-<ul>
-<li>Professional digital marketing classes and practical training.</li>
-<li>SEO, paid ads, content creation and marketing tools.</li>
-</ul>
-
-</div>
-
-<div class="job">
-
-<div class="job-head">
-
-<div>
-<h3>RiseOn Infotech – Academy</h3>
-<h4>Digital Marketing Trainer</h4>
-</div>
-
-<div class="date">Mar 2022 – Dec 2024</div>
-
-</div>
-
-<ul>
-<li>Full digital marketing programs and hands-on live-project training.</li>
-</ul>
-
-</div>
-
-<div class="job">
-
-<div class="job-head">
-
-<div>
-<h3>Anques Technolab</h3>
-<h4>Digital Marketing Manager</h4>
-</div>
-
-<div class="date">Jan 2023 – Apr 2024</div>
-
-</div>
-
-<ul>
-<li>Digital marketing management.</li>
-<li>Web/app development and digital-service exposure.</li>
-</ul>
-
-</div>
-
-<div class="job">
-
-<div class="job-head">
-
-<div>
-<h3>Actiza Infotech</h3>
-<h4>SEO Manager</h4>
-</div>
-
-<div class="date">Dates Not Specified</div>
-
-</div>
-
-<ul>
-<li>Handled 2–3 websites.</li>
-<li>On-page SEO, Off-page SEO and International SEO.</li>
-</ul>
-
-</div>
-
-<div class="job">
-
-<div class="job-head">
-
-<div>
-<h3>Merind Infotech</h3>
-<h4>SEO & Website Coding</h4>
-</div>
-
-<div class="date">Aug 2018 – Dec 2019</div>
-
-</div>
-
-<ul>
-<li>SEO, Off-page SEO and website coding work.</li>
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- SKILLS -->
-
-<section id="skills" class="skills-section">
-
-<div class="container">
-
-<span class="section-tag">CORE EXPERTISE</span>
-
-<h2 class="section-title">
-Professional Skills
-</h2>
-
-<div class="skills-grid">
-
-<div class="skill">SEO</div>
-<div class="skill">On-page SEO</div>
-<div class="skill">Off-page SEO</div>
-<div class="skill">ASO</div>
-<div class="skill">Meta Ads</div>
-<div class="skill">Google Ads</div>
-<div class="skill">Social Media</div>
-<div class="skill">Content Creation</div>
-<div class="skill">WordPress</div>
-<div class="skill">WooCommerce</div>
-<div class="skill">Website Coding</div>
-<div class="skill">Live Hosting</div>
-<div class="skill">ChatGPT Prompting</div>
-<div class="skill">AI Tools</div>
-<div class="skill">Canva</div>
-<div class="skill">Analytics</div>
-<div class="skill">Google Search Console</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- SOCIAL MEDIA EXPERIENCE -->
-
-<section id="social" class="social-section">
-
-<div class="container">
-
-<span class="section-tag">SOCIAL MEDIA WORK</span>
-
-<h2 class="section-title">
-Company & Social Media Experience
-</h2>
-
-<div class="table-box">
-
-<table class="social-table">
-
-<thead>
-
-<tr>
-<th>Company / Brand</th>
-<th>Work</th>
-<th>Social Platforms</th>
-<th>Market / Details</th>
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-<td><strong>USA Social Media Accounts</strong></td>
-<td>Instagram & Facebook Account Management</td>
-<td>📸 Instagram &nbsp; 🔵 Facebook</td>
-<td>USA Market</td>
-</tr>
-
-<tr>
-<td><strong>Arrowmeds</strong></td>
-<td>Social Media Handling & Content Management</td>
-<td>📸 Instagram &nbsp; 🔵 Facebook</td>
-<td>Digital Marketing</td>
-</tr>
-
-<tr>
-<td><strong>Recastle.in</strong></td>
-<td>Website & Social Media Handling</td>
-<td>📸 Instagram &nbsp; 🔵 Facebook</td>
-<td>India</td>
-</tr>
-
-<tr>
-<td><strong>S2Soft Solutions</strong></td>
-<td>Company Social Media Management</td>
-<td>📸 Instagram &nbsp; 🔵 Facebook</td>
-<td>Company Branding</td>
-</tr>
-
-<tr>
-<td><strong>Anques Technolab</strong></td>
-<td>Social Media Handling & Digital Marketing</td>
-<td>📸 Instagram &nbsp; 🔵 Facebook</td>
-<td>Digital Marketing</td>
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- PORTFOLIO -->
-
-<section id="portfolio">
-
-<div class="container">
-
-<span class="section-tag">LIVE PROJECTS</span>
-
-<h2 class="section-title">
-Work Portfolio
-</h2>
-
-<div class="portfolio-grid">
-
-<div class="project">
-<div class="project-top">FLICKO</div>
-<div class="project-body">
-<p>WordPress website project.</p>
-<a href="https://flicko.totalh.net/" target="_blank" class="project-link">VIEW LIVE PROJECT →</a>
-</div>
-</div>
-
-<div class="project">
-<div class="project-top">FLIZZO</div>
-<div class="project-body">
-<p>Coding and hosting project.</p>
-<a href="https://flizzo.vercel.app" target="_blank" class="project-link">VIEW LIVE PROJECT →</a>
-</div>
-</div>
-
-<div class="project">
-<div class="project-top">MAX SALON Z</div>
-<div class="project-body">
-<p>Coding and live hosting project.</p>
-<a href="https://maxsalonz.vercel.app" target="_blank" class="project-link">VIEW LIVE PROJECT →</a>
-</div>
-</div>
-
-<div class="project">
-<div class="project-top">OLD CARZ</div>
-<div class="project-body">
-<p>Used car marketplace website project.</p>
-<a href="https://oldcarz.vercel.app" target="_blank" class="project-link">VIEW LIVE PROJECT →</a>
-</div>
-</div>
-
-<div class="project">
-<div class="project-top">RISEON INFOTECH</div>
-<div class="project-body">
-<p>Website coding and hosting project.</p>
-<a href="https://riseon-infotech1.vercel.app/" target="_blank" class="project-link">VIEW LIVE PROJECT →</a>
-</div>
-</div>
-
-<div class="project">
-<div class="project-top">WADALA PIZZA</div>
-<div class="project-body">
-<p>Restaurant and online ordering website.</p>
-<a href="http://wadalapizzaa.vercel.app/" target="_blank" class="project-link">VIEW LIVE PROJECT →</a>
-</div>
-</div>
-
-<div class="project">
-<div class="project-top">INSTA CLONE</div>
-<div class="project-body">
-<p>AI website project.</p>
-<a href="https://insta-clone--mixeci1216.replit.app/home/" target="_blank" class="project-link">VIEW LIVE PROJECT →</a>
-</div>
-</div>
-
-<div class="project">
-<div class="project-top">KAPODARA CLINIC</div>
-<div class="project-body">
-<p>AI-powered website project.</p>
-<a href="https://kapodara-clinic-421107066400.asia-southeast1.run.app/" target="_blank" class="project-link">VIEW LIVE PROJECT →</a>
-</div>
-</div>
-
-<div class="project">
-<div class="project-top">AI MY CARRYMAN</div>
-<div class="project-body">
-<p>AI website project.</p>
-<a href="https://aimycarryman.vercel.app/" target="_blank" class="project-link">VIEW LIVE PROJECT →</a>
-</div>
-</div>
-
-<div class="project">
-<div class="project-top">WADALA MY PIZZA</div>
-<div class="project-body">
-<p>AI website project.</p>
-<a href="https://wadala-mypizza.vercel.app/" target="_blank" class="project-link">VIEW LIVE PROJECT →</a>
-</div>
-</div>
-
-<div class="project">
-<div class="project-top">BENZ</div>
-<div class="project-body">
-<p>AI website project.</p>
-<a href="https://benz.callbell.shop/" target="_blank" class="project-link">VIEW LIVE PROJECT →</a>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- TOOLS -->
-
-<section class="skills-section">
-
-<div class="container">
-
-<span class="section-tag">MY TOOLKIT</span>
-
-<h2 class="section-title">
-Tools & Platforms
-</h2>
-
-<div class="skills-grid">
-
-<div class="skill">ChatGPT</div>
-<div class="skill">Perplexity.ai</div>
-<div class="skill">Ubersuggest</div>
-<div class="skill">Keywords Everywhere</div>
-<div class="skill">MozBar</div>
-<div class="skill">Microsoft Clarity</div>
-<div class="skill">Google Play Console</div>
-<div class="skill">Sensor Tower</div>
-<div class="skill">Data.io</div>
-<div class="skill">Quetext</div>
-<div class="skill">Grexa AI GBP Booster</div>
-<div class="skill">Canva</div>
-<div class="skill">Lovart.io</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- EDUCATION -->
-
-<section>
-
-<div class="container">
-
-<span class="section-tag">EDUCATION</span>
-
-<h2 class="section-title">
-Academic Background
-</h2>
-
-<div class="edu-card">
-
-<h3>MCA — Pune University</h3>
-
-<p>Master of Computer Applications</p>
-
-<br>
-
-<strong>2014 – 2016</strong>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- LANGUAGES -->
-
-<section class="skills-section">
-
-<div class="container">
-
-<span class="section-tag">LANGUAGES</span>
-
-<h2 class="section-title">
-Communication Skills
-</h2>
-
-<div class="skills-grid">
-
-<div class="skill">Hindi</div>
-<div class="skill">English</div>
-<div class="skill">Gujarati</div>
-<div class="skill">Urdu</div>
-<div class="skill">Arabic</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact" class="contact">
-
-<div class="container">
-
-<span class="section-tag">LET'S CONNECT</span>
-
-<h2 class="section-title">
-Let's Build Something Digital.
-</h2>
-
-<div class="contact-grid">
-
-<a href="tel:81281177882" class="contact-item">
-📱 81281177882
-</a>
-
-<a href="mailto:iftekhar1708@gmail.com" class="contact-item">
-📧 iftekhar1708@gmail.com
-</a>
-
-<a href="https://wa.me/9181281177882" target="_blank" class="contact-item">
-💬 WhatsApp Me
-</a>
-
-<div class="contact-item">
-📍 Mumbai, Maharashtra, India
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-© 2026 Mr. IFTEKHAR • DIGITAL MARKETING EXPERT • SEO • AI • WEB DEVELOPMENT
-</footer>
-
-<!-- WHATSAPP POPUP -->
-
-<div class="whatsapp-popup" id="whatsappPopup">
-
-<button class="popup-close" onclick="closePopup()">×</button>
-
-<div class="popup-icon">💬</div>
-
-<h3>Let's Work Together!</h3>
-
-<p>
-SEO • Digital Marketing • Social Media • AI • Website Development
-</p>
-
-<a href="https://wa.me/9181281177882" target="_blank" class="popup-btn">
-CHAT ON WHATSAPP
-</a>
-
-</div>
-
-<script>
-
-setTimeout(function(){
-  document.getElementById("whatsappPopup").classList.add("show");
-},1500);
-
-function closePopup(){
-  document.getElementById("whatsappPopup").style.display="none";
-}
-
-</script>
+  </script>
 
 </body>
 </html>
