@@ -1,0 +1,2359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ghar Ka Tiffin | Fresh Homemade Food in Mumbai</title>
+  <meta
+    name="description"
+    content="Fresh, homemade and hygienic tiffin service in Dadar, Wadala, Sewri and Sion."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --primary: #e85d04;
+      --primary-dark: #c94d00;
+      --secondary: #2d6a4f;
+      --cream: #fffaf2;
+      --light: #fff3df;
+      --dark: #20201d;
+      --muted: #6d6a63;
+      --white: #ffffff;
+      --border: #eee4d5;
+      --shadow: 0 15px 45px rgba(48, 35, 20, 0.09);
+      --radius: 20px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--dark);
+      background: var(--cream);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(1160px, 92%);
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      background: rgba(255, 250, 242, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(238, 228, 213, 0.7);
+    }
+
+    .nav {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 22px;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      font-size: 22px;
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      list-style: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      transition: 0.25s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-order {
+      background: var(--primary);
+      color: white !important;
+      padding: 12px 20px;
+      border-radius: 100px;
+    }
+
+    .nav-order:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: none;
+      font-size: 27px;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 720px;
+      padding-top: 150px;
+      padding-bottom: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      background: #ffe6c4;
+      right: -160px;
+      top: 100px;
+      z-index: -1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #e7f3ec;
+      color: var(--secondary);
+      padding: 9px 14px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(46px, 6vw, 76px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .hero-text {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 570px;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      padding: 15px 23px;
+      border-radius: 100px;
+      font-weight: 700;
+      transition: 0.25s;
+    }
+
+    .btn-primary {
+      color: white;
+      background: var(--primary);
+      box-shadow: 0 10px 25px rgba(232, 93, 4, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      background: white;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .hero-food {
+      position: relative;
+    }
+
+    .food-card {
+      background: white;
+      border-radius: 35px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      transform: rotate(2deg);
+    }
+
+    .food-image {
+      height: 470px;
+      border-radius: 27px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 35px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 30% 25%, #ffe9bf, transparent 30%),
+        linear-gradient(145deg, #d66b21, #8b3e13);
+    }
+
+    .thali {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 50% 50%, #fff 0 38%, transparent 39%),
+        radial-gradient(circle at 30% 30%, #f6c453 0 8%, transparent 9%),
+        radial-gradient(circle at 70% 35%, #64a34b 0 9%, transparent 10%),
+        radial-gradient(circle at 65% 70%, #d65336 0 9%, transparent 10%),
+        radial-gradient(circle at 30% 68%, #8d5a38 0 8%, transparent 9%),
+        #e9d8bd;
+      border: 16px solid #f4ead9;
+      box-shadow:
+        0 20px 40px rgba(0,0,0,.25),
+        inset 0 0 0 5px #d5bea0;
+      position: relative;
+    }
+
+    .thali::after {
+      content: "🍚  🥘  🫓  🥗";
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      bottom: -58px;
+      left: 0;
+      font-size: 25px;
+      letter-spacing: 5px;
+    }
+
+    .floating-card {
+      position: absolute;
+      background: white;
+      border-radius: 17px;
+      padding: 14px 18px;
+      box-shadow: var(--shadow);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .floating-card.one {
+      left: -30px;
+      top: 80px;
+    }
+
+    .floating-card.two {
+      right: -25px;
+      bottom: 60px;
+    }
+
+    /* =========================
+       TRUST BAR
+    ========================== */
+
+    .trust-bar {
+      background: var(--secondary);
+      color: white;
+      padding: 24px 0;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .trust-icon {
+      font-size: 27px;
+    }
+
+    .trust-item strong {
+      display: block;
+      font-size: 15px;
+    }
+
+    .trust-item small {
+      opacity: .75;
+    }
+
+    /* =========================
+       COMMON SECTIONS
+    ========================== */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 55px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      color: var(--primary);
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(34px, 4vw, 50px);
+      line-height: 1.15;
+      margin-bottom: 15px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    /* =========================
+       TODAY'S MENU
+    ========================== */
+
+    .menu-section {
+      background: white;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .menu-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px;
+      background: var(--cream);
+      transition: .3s;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow);
+    }
+
+    .menu-top {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+
+    .menu-emoji {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      background: #fff;
+      border-radius: 15px;
+      font-size: 30px;
+    }
+
+    .tag {
+      height: fit-content;
+      background: #e5f4e9;
+      color: #2f734d;
+      border-radius: 50px;
+      padding: 6px 10px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .menu-card h3 {
+      margin-bottom: 8px;
+      font-size: 19px;
+    }
+
+    .menu-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       PLANS
+    ========================== */
+
+    .plans {
+      background: #fff7ea;
+    }
+
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .plan {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      padding: 32px;
+      position: relative;
+    }
+
+    .plan.featured {
+      border: 2px solid var(--primary);
+      transform: scale(1.03);
+      box-shadow: var(--shadow);
+    }
+
+    .popular {
+      position: absolute;
+      top: -14px;
+      right: 25px;
+      background: var(--primary);
+      color: white;
+      padding: 6px 13px;
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .plan h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-size: 38px;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 15px 0 22px;
+    }
+
+    .price span {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .features {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+
+    .features li {
+      padding: 8px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .features li::before {
+      content: "✓";
+      color: var(--secondary);
+      font-weight: 800;
+      margin-right: 10px;
+    }
+
+    .plan .btn {
+      width: 100%;
+    }
+
+    /* =========================
+       SUBSCRIPTION
+    ========================== */
+
+    .subscription {
+      background: var(--secondary);
+      color: white;
+    }
+
+    .subscription-box {
+      display: grid;
+      grid-template-columns: 1fr .8fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .subscription h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .subscription p {
+      opacity: .8;
+      max-width: 570px;
+      margin-bottom: 25px;
+    }
+
+    .subscription .btn-primary {
+      background: white;
+      color: var(--secondary);
+    }
+
+    .subscription-card {
+      background: white;
+      color: var(--dark);
+      padding: 30px;
+      border-radius: 25px;
+      box-shadow: 0 20px 50px rgba(0,0,0,.2);
+    }
+
+    .subscription-card h3 {
+      margin-bottom: 20px;
+      font-family: "Playfair Display", serif;
+      font-size: 26px;
+    }
+
+    .subscription-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    /* =========================
+       AREAS
+    ========================== */
+
+    .areas-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .area {
+      padding: 30px 20px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      text-align: center;
+      transition: .25s;
+    }
+
+    .area:hover {
+      background: var(--primary);
+      color: white;
+      transform: translateY(-5px);
+    }
+
+    .area-icon {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .area h3 {
+      font-size: 18px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-visual {
+      min-height: 450px;
+      background:
+        linear-gradient(rgba(45,106,79,.1), rgba(45,106,79,.1)),
+        #e5efe9;
+      border-radius: 30px;
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+    }
+
+    .kitchen-circle {
+      width: 260px;
+      height: 260px;
+      background: white;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 100px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-content h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 48px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .about-content > p {
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .check-list {
+      list-style: none;
+    }
+
+    .check-list li {
+      margin: 12px 0;
+      font-weight: 600;
+    }
+
+    .check-list li span {
+      display: inline-grid;
+      place-items: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #e3f2e8;
+      color: var(--secondary);
+      margin-right: 9px;
+    }
+
+    /* =========================
+       HOW IT WORKS
+    ========================== */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .step {
+      text-align: center;
+      padding: 35px 25px;
+    }
+
+    .step-number {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--primary);
+      color: white;
+      margin: 0 auto 20px;
+      font-size: 21px;
+      font-weight: 800;
+    }
+
+    .step h3 {
+      margin-bottom: 10px;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =========================
+       REVIEWS
+    ========================== */
+
+    .reviews {
+      background: #fff7ea;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .review {
+      background: white;
+      padding: 28px;
+      border-radius: 22px;
+      border: 1px solid var(--border);
+    }
+
+    .stars {
+      color: #f4a261;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+    }
+
+    .review p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .customer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .avatar {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #ffe4bd;
+      font-weight: 800;
+    }
+
+    .customer strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .customer small {
+      color: var(--muted);
+    }
+
+    /* =========================
+       FAQ
+    ========================== */
+
+    .faq-container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 20px 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-item.active .plus {
+      transform: rotate(45deg);
+    }
+
+    .plus {
+      font-size: 24px;
+      transition: .25s;
+    }
+
+    /* =========================
+       CONTACT / ORDER
+    ========================== */
+
+    .contact {
+      background: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 45px;
+    }
+
+    .contact-info {
+      padding: 20px 0;
+    }
+
+    .contact-info h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 48px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .contact-info > p {
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 14px;
+      margin: 18px 0;
+    }
+
+    .contact-icon {
+      width: 42px;
+      height: 42px;
+      background: #fff1df;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+    }
+
+    .contact-item small {
+      color: var(--muted);
+    }
+
+    .order-form {
+      background: var(--cream);
+      padding: 32px;
+      border-radius: 25px;
+      border: 1px solid var(--border);
+    }
+
+    .order-form h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      background: white;
+      padding: 13px 14px;
+      border-radius: 11px;
+      font: inherit;
+      outline: none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--primary);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .order-form .btn {
+      width: 100%;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #1d2e27;
+      color: white;
+      padding: 60px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 45px;
+    }
+
+    .footer-logo {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    .footer-logo span {
+      color: #ff8534;
+    }
+
+    footer p,
+    footer a {
+      color: rgba(255,255,255,.65);
+      font-size: 14px;
+    }
+
+    footer h4 {
+      margin-bottom: 15px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin: 9px 0;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding-top: 20px;
+      color: rgba(255,255,255,.5);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    /* =========================
+       WHATSAPP FLOAT
+    ========================== */
+
+    .whatsapp {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      z-index: 900;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25d366;
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 29px;
+      box-shadow: 0 10px 25px rgba(37,211,102,.3);
+      transition: .25s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    /* =========================
+       TOAST
+    ========================== */
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 30px;
+      transform: translate(-50%, 100px);
+      background: #222;
+      color: white;
+      padding: 13px 20px;
+      border-radius: 50px;
+      font-size: 14px;
+      z-index: 2000;
+      transition: .35s;
+    }
+
+    .toast.show {
+      transform: translate(-50%, 0);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 900px) {
+      .nav-links {
+        position: absolute;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        background: var(--cream);
+        flex-direction: column;
+        padding: 25px;
+        gap: 18px;
+        display: none;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .subscription-box,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 120px;
+      }
+
+      .hero-food {
+        max-width: 600px;
+        margin: auto;
+      }
+
+      .menu-grid,
+      .plans-grid,
+      .reviews-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .areas-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 70px 0;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-bottom: 60px;
+      }
+
+      .hero h1 {
+        font-size: 47px;
+      }
+
+      .hero-text {
+        font-size: 16px;
+      }
+
+      .food-image {
+        height: 350px;
+      }
+
+      .thali {
+        width: 245px;
+        height: 245px;
+      }
+
+      .floating-card.one {
+        left: -5px;
+      }
+
+      .floating-card.two {
+        right: -5px;
+      }
+
+      .menu-grid,
+      .plans-grid,
+      .reviews-grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .plan.featured {
+        transform: none;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .trust-item {
+        align-items: flex-start;
+      }
+
+      .areas-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-content h2,
+      .contact-info h2 {
+        font-size: 39px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-order {
+        padding: 10px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+    <div class="container nav">
+
+      <a href="#home" class="logo">
+        <div class="logo-icon">🍱</div>
+        Ghar Ka <span>Tiffin</span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#menu">Today's Menu</a></li>
+        <li><a href="#plans">Tiffin Plans</a></li>
+        <li><a href="#subscription">Subscription</a></li>
+        <li><a href="#areas">Service Areas</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a class="nav-order" href="#order">Order Now</a>
+        </li>
+      </ul>
+
+    </div>
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <main id="home">
+
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+
+          <div class="badge">
+            🏠 Homemade • Fresh • Hygienic
+          </div>
+
+          <h1>
+            Ghar Jaisa Khana,
+            <span>Roz Aapke Ghar.</span>
+          </h1>
+
+          <p class="hero-text">
+            Freshly cooked, homestyle meals prepared with love and delivered
+            hot to your doorstep across Dadar, Wadala, Sewri & Sion.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#order" class="btn btn-primary">
+              🍱 Order Today's Tiffin
+            </a>
+
+            <a href="#plans" class="btn btn-outline">
+              View Tiffin Plans →
+            </a>
+          </div>
+
+        </div>
+
+        <div class="hero-food">
+
+          <div class="food-card">
+            <div class="food-image">
+              <div class="thali"></div>
+            </div>
+          </div>
+
+          <div class="floating-card one">
+            ⭐ 4.9/5 Customer Rating
+          </div>
+
+          <div class="floating-card two">
+            🥘 Freshly Cooked Daily
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TRUST BAR -->
+
+    <div class="trust-bar">
+      <div class="container trust-grid">
+
+        <div class="trust-item">
+          <div class="trust-icon">🥘</div>
+          <div>
+            <strong>Freshly Cooked</strong>
+            <small>Every single day</small>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">🧼</div>
+          <div>
+            <strong>Hygienic Kitchen</strong>
+            <small>Clean & safe cooking</small>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">🚴</div>
+          <div>
+            <strong>Quick Delivery</strong>
+            <small>Hot at your doorstep</small>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">❤️</div>
+          <div>
+            <strong>Made With Love</strong>
+            <small>Just like home</small>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- =========================
+         TODAY'S MENU
+    ========================== -->
+
+    <section class="menu-section" id="menu">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">Today's Menu</div>
+
+          <h2>
+            What's Cooking Today?
+          </h2>
+
+          <p>
+            Simple, comforting food made fresh every morning.
+          </p>
+        </div>
+
+
+        <div class="menu-grid">
+
+          <div class="menu-card">
+            <div class="menu-top">
+              <div class="menu-emoji">🍚</div>
+              <span class="tag">VEG</span>
+            </div>
+
+            <h3>Dal Tadka & Jeera Rice</h3>
+
+            <p>
+              Yellow dal, jeera rice, seasonal sabzi,
+              4 rotis & fresh salad.
+            </p>
+          </div>
+
+
+          <div class="menu-card">
+            <div class="menu-top">
+              <div class="menu-emoji">🥘</div>
+              <span class="tag">POPULAR</span>
+            </div>
+
+            <h3>Paneer Masala Thali</h3>
+
+            <p>
+              Paneer masala, dal, 4 rotis, rice,
+              salad & homemade pickle.
+            </p>
+          </div>
+
+
+          <div class="menu-card">
+            <div class="menu-top">
+              <div class="menu-emoji">🫓</div>
+              <span class="tag">VEG</span>
+            </div>
+
+            <h3>Mix Veg & Roti</h3>
+
+            <p>
+              Seasonal mixed vegetables, dal,
+              5 rotis, rice & salad.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         TIFFIN PLANS
+    ========================== -->
+
+    <section class="plans" id="plans">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">Tiffin Plans</div>
+
+          <h2>
+            Choose Your Perfect Tiffin
+          </h2>
+
+          <p>
+            Flexible plans for students, professionals and families.
+          </p>
+        </div>
+
+
+        <div class="plans-grid">
+
+          <div class="plan">
+
+            <h3>Mini Tiffin</h3>
+
+            <p>Perfect for light lunch.</p>
+
+            <div class="price">
+              ₹89 <span>/ meal</span>
+            </div>
+
+            <ul class="features">
+              <li>4 Rotis</li>
+              <li>1 Seasonal Sabzi</li>
+              <li>Dal</li>
+              <li>Fresh Salad</li>
+            </ul>
+
+            <a href="#order" class="btn btn-outline">
+              Choose Plan
+            </a>
+
+          </div>
+
+
+          <div class="plan featured">
+
+            <div class="popular">
+              MOST POPULAR
+            </div>
+
+            <h3>Regular Tiffin</h3>
+
+            <p>Our complete everyday meal.</p>
+
+            <div class="price">
+              ₹119 <span>/ meal</span>
+            </div>
+
+            <ul class="features">
+              <li>4 Rotis</li>
+              <li>2 Seasonal Sabzis</li>
+              <li>Dal</li>
+              <li>Rice</li>
+              <li>Fresh Salad & Pickle</li>
+            </ul>
+
+            <a href="#order" class="btn btn-primary">
+              Choose Plan
+            </a>
+
+          </div>
+
+
+          <div class="plan">
+
+            <h3>Premium Tiffin</h3>
+
+            <p>A little extra for special days.</p>
+
+            <div class="price">
+              ₹149 <span>/ meal</span>
+            </div>
+
+            <ul class="features">
+              <li>5 Rotis</li>
+              <li>2 Special Sabzis</li>
+              <li>Dal</li>
+              <li>Rice</li>
+              <li>Sweet / Dessert</li>
+              <li>Salad & Pickle</li>
+            </ul>
+
+            <a href="#order" class="btn btn-outline">
+              Choose Plan
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         MONTHLY SUBSCRIPTION
+    ========================== -->
+
+    <section class="subscription" id="subscription">
+
+      <div class="container subscription-box">
+
+        <div>
+
+          <div class="eyebrow" style="color:#ffb16e;">
+            Monthly Subscription
+          </div>
+
+          <h2>
+            Don't Order Every Day.
+            Just Subscribe.
+          </h2>
+
+          <p>
+            Get your daily home-style meals automatically delivered.
+            Save money, save time and never worry about lunch again.
+          </p>
+
+          <a href="#order" class="btn btn-primary">
+            Start Monthly Plan →
+          </a>
+
+        </div>
+
+
+        <div class="subscription-card">
+
+          <h3>Regular Monthly Plan</h3>
+
+          <div class="subscription-row">
+            <span>Meals</span>
+            <strong>26 Lunches</strong>
+          </div>
+
+          <div class="subscription-row">
+            <span>Daily Tiffin</span>
+            <strong>₹109 / meal</strong>
+          </div>
+
+          <div class="subscription-row">
+            <span>Delivery</span>
+            <strong>Included</strong>
+          </div>
+
+          <div class="subscription-row">
+            <span>Pause Plan</span>
+            <strong>Yes</strong>
+          </div>
+
+          <div class="price">
+            ₹2,834 <span>/ month</span>
+          </div>
+
+          <a href="#order" class="btn btn-primary" style="width:100%;">
+            Subscribe Now
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICE AREAS
+    ========================== -->
+
+    <section id="areas">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">Service Areas</div>
+
+          <h2>
+            Delivered Around Your Neighbourhood
+          </h2>
+
+          <p>
+            Currently serving selected areas in Central Mumbai.
+          </p>
+        </div>
+
+
+        <div class="areas-grid">
+
+          <div class="area">
+            <div class="area-icon">📍</div>
+            <h3>Dadar</h3>
+          </div>
+
+          <div class="area">
+            <div class="area-icon">📍</div>
+            <h3>Wadala</h3>
+          </div>
+
+          <div class="area">
+            <div class="area-icon">📍</div>
+            <h3>Sewri</h3>
+          </div>
+
+          <div class="area">
+            <div class="area-icon">📍</div>
+            <h3>Sion</h3>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="about" id="about">
+
+      <div class="container about-grid">
+
+        <div class="about-visual">
+          <div class="kitchen-circle">
+            👩‍🍳
+          </div>
+        </div>
+
+
+        <div class="about-content">
+
+          <div class="eyebrow">
+            About Our Kitchen
+          </div>
+
+          <h2>
+            Food That Feels Like Home.
+          </h2>
+
+          <p>
+            We started our tiffin service with one simple idea —
+            people living away from home deserve food that tastes
+            like it was cooked in their own kitchen.
+          </p>
+
+          <p>
+            Our meals are prepared in small batches using fresh
+            ingredients, traditional recipes and lots of care.
+          </p>
+
+          <ul class="check-list">
+            <li><span>✓</span> Fresh vegetables & ingredients</li>
+            <li><span>✓</span> No unnecessary preservatives</li>
+            <li><span>✓</span> Clean & hygienic preparation</li>
+            <li><span>✓</span> Balanced everyday meals</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         HOW IT WORKS
+    ========================== -->
+
+    <section id="how">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            How It Works
+          </div>
+
+          <h2>
+            Your Lunch, Made Easy
+          </h2>
+
+          <p>
+            Three simple steps and your home-style meal is on the way.
+          </p>
+
+        </div>
+
+
+        <div class="steps">
+
+          <div class="step">
+
+            <div class="step-number">
+              1
+            </div>
+
+            <h3>Choose Your Plan</h3>
+
+            <p>
+              Select a one-time tiffin or monthly subscription.
+            </p>
+
+          </div>
+
+
+          <div class="step">
+
+            <div class="step-number">
+              2
+            </div>
+
+            <h3>Place Your Order</h3>
+
+            <p>
+              Tell us your delivery location and preferred time.
+            </p>
+
+          </div>
+
+
+          <div class="step">
+
+            <div class="step-number">
+              3
+            </div>
+
+            <h3>Enjoy Your Meal</h3>
+
+            <p>
+              We cook fresh and deliver your meal hot to your door.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         REVIEWS
+    ========================== -->
+
+    <section class="reviews" id="reviews">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            Customer Reviews
+          </div>
+
+          <h2>
+            Loved By Our Customers
+          </h2>
+
+          <p>
+            Real food. Real people. Real love.
+          </p>
+
+        </div>
+
+
+        <div class="reviews-grid">
+
+          <div class="review">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <p>
+              "Finally found a tiffin that actually tastes
+              homemade. The dal and rotis are excellent!"
+            </p>
+
+            <div class="customer">
+              <div class="avatar">RS</div>
+              <div>
+                <strong>Rahul S.</strong>
+                <small>Dadar</small>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="review">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <p>
+              "Very consistent quality. I have been ordering
+              the monthly plan and it has made office lunches
+              so much easier."
+            </p>
+
+            <div class="customer">
+              <div class="avatar">PN</div>
+              <div>
+                <strong>Priya N.</strong>
+                <small>Sion</small>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="review">
+
+            <div class="stars">
+              ★★★★★
+            </div>
+
+            <p>
+              "Simple ghar ka khana, exactly what I was looking
+              for. Delivery is also reliable."
+            </p>
+
+            <div class="customer">
+              <div class="avatar">AK</div>
+              <div>
+                <strong>Amit K.</strong>
+                <small>Wadala</small>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FAQ
+    ========================== -->
+
+    <section id="faq">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow">
+            FAQ
+          </div>
+
+          <h2>
+            Frequently Asked Questions
+          </h2>
+
+        </div>
+
+
+        <div class="faq-container">
+
+          <div class="faq-item">
+
+            <div class="faq-question">
+              <span>Do you deliver every day?</span>
+              <span class="plus">+</span>
+            </div>
+
+            <div class="faq-answer">
+              Yes. Our regular service operates on scheduled
+              delivery days. Delivery timings depend on your
+              selected area and plan.
+            </div>
+
+          </div>
+
+
+          <div class="faq-item">
+
+            <div class="faq-question">
+              <span>Can I order just one tiffin?</span>
+              <span class="plus">+</span>
+            </div>
+
+            <div class="faq-answer">
+              Yes. You can order a single meal without taking
+              a monthly subscription.
+            </div>
+
+          </div>
+
+
+          <div class="faq-item">
+
+            <div class="faq-question">
+              <span>Can I pause my monthly subscription?</span>
+              <span class="plus">+</span>
+            </div>
+
+            <div class="faq-answer">
+              Yes. Please contact us in advance and we can
+              pause your subscription according to our
+              service policy.
+            </div>
+
+          </div>
+
+
+          <div class="faq-item">
+
+            <div class="faq-question">
+              <span>Do you offer Jain food?</span>
+              <span class="plus">+</span>
+            </div>
+
+            <div class="faq-answer">
+              Jain meal availability can be configured based
+              on the day's menu. Please contact us before ordering.
+            </div>
+
+          </div>
+
+
+          <div class="faq-item">
+
+            <div class="faq-question">
+              <span>How do I place an order?</span>
+              <span class="plus">+</span>
+            </div>
+
+            <div class="faq-answer">
+              Fill the order form below or contact us directly
+              on WhatsApp.
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT + ORDER
+    ========================== -->
+
+    <section class="contact" id="contact">
+
+      <div class="container contact-grid">
+
+        <div class="contact-info">
+
+          <div class="eyebrow">
+            Contact / WhatsApp
+          </div>
+
+          <h2>
+            Ready For Your First Tiffin?
+          </h2>
+
+          <p>
+            Place your order today and enjoy simple,
+            fresh and comforting homemade food.
+          </p>
+
+
+          <div class="contact-item">
+
+            <div class="contact-icon">
+              📱
+            </div>
+
+            <div>
+              <strong>WhatsApp</strong>
+              <small>+91 98765 43210</small>
+            </div>
+
+          </div>
+
+
+          <div class="contact-item">
+
+            <div class="contact-icon">
+              📧
+            </div>
+
+            <div>
+              <strong>Email</strong>
+              <small>hello@gharkatiffin.in</small>
+            </div>
+
+          </div>
+
+
+          <div class="contact-item">
+
+            <div class="contact-icon">
+              🕐
+            </div>
+
+            <div>
+              <strong>Order Timing</strong>
+              <small>10:00 AM – 8:00 PM</small>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="order-form" id="order">
+
+          <h3>
+            Place Your Order
+          </h3>
+
+          <form id="orderForm">
+
+            <div class="form-row">
+
+              <div class="form-group">
+                <label for="name">
+                  Your Name
+                </label>
+
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+
+
+              <div class="form-group">
+                <label for="phone">
+                  Phone Number
+                </label>
+
+                <input
+                  id="phone"
+                  type="tel"
+                  placeholder="98765 43210"
+                  required
+                />
+              </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label for="plan">
+                  Select Plan
+                </label>
+
+                <select id="plan" required>
+
+                  <option value="">
+                    Choose a plan
+                  </option>
+
+                  <option>
+                    Mini Tiffin - ₹89
+                  </option>
+
+                  <option>
+                    Regular Tiffin - ₹119
+                  </option>
+
+                  <option>
+                    Premium Tiffin - ₹149
+                  </option>
+
+                  <option>
+                    Monthly Subscription
+                  </option>
+
+                </select>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="area">
+                  Delivery Area
+                </label>
+
+                <select id="area" required>
+
+                  <option value="">
+                    Select area
+                  </option>
+
+                  <option>Dadar</option>
+                  <option>Wadala</option>
+                  <option>Sewri</option>
+                  <option>Sion</option>
+
+                </select>
+
+              </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="address">
+                Delivery Address
+              </label>
+
+              <input
+                id="address"
+                type="text"
+                placeholder="Flat / Building / Street"
+                required
+              />
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="message">
+                Special Request
+              </label>
+
+              <textarea
+                id="message"
+                placeholder="Jain / less spicy / other request..."
+              ></textarea>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="btn btn-primary"
+            >
+              Confirm Order →
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <div class="footer-logo">
+            🍱 Ghar Ka <span>Tiffin</span>
+          </div>
+
+          <p>
+            Fresh homemade meals delivered across
+            Dadar, Wadala, Sewri & Sion.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h4>Quick Links</h4>
+
+          <ul class="footer-links">
+            <li><a href="#menu">Today's Menu</a></li>
+            <li><a href="#plans">Tiffin Plans</a></li>
+            <li><a href="#subscription">Subscription</a></li>
+            <li><a href="#areas">Service Areas</a></li>
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h4>Company</h4>
+
+          <ul class="footer-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#how">How It Works</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h4>Contact</h4>
+
+          <ul class="footer-links">
+            <li><a href="#contact">WhatsApp</a></li>
+            <li><a href="#contact">Call Us</a></li>
+            <li><a href="#order">Order Now</a></li>
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+        © 2026 Ghar Ka Tiffin. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- WHATSAPP -->
+
+  <a
+    href="https://wa.me/919876543210?text=Hi%20Ghar%20Ka%20Tiffin,%20I%20want%20to%20order%20a%20tiffin."
+    class="whatsapp"
+    target="_blank"
+    aria-label="WhatsApp"
+  >
+    ☎
+  </a>
+
+
+  <div class="toast" id="toast">
+    Thank you! We'll contact you shortly.
+  </div>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    /* Mobile Menu */
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+
+
+    /* Close mobile menu */
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+      });
+
+    });
+
+
+    /* FAQ */
+
+    document.querySelectorAll(".faq-question").forEach(question => {
+
+      question.addEventListener("click", () => {
+
+        const item = question.parentElement;
+
+        document.querySelectorAll(".faq-item").forEach(other => {
+
+          if (other !== item) {
+            other.classList.remove("active");
+          }
+
+        });
+
+        item.classList.toggle("active");
+
+      });
+
+    });
+
+
+    /* Order Form */
+
+    const orderForm = document.getElementById("orderForm");
+    const toast = document.getElementById("toast");
+
+    orderForm.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      toast.classList.add("show");
+
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 3500);
+
+      orderForm.reset();
+
+    });
+
+
+    /* Header shadow on scroll */
+
+    window.addEventListener("scroll", () => {
+
+      const header = document.querySelector("header");
+
+      if (window.scrollY > 20) {
+        header.style.boxShadow =
+          "0 5px 25px rgba(0,0,0,.06)";
+      } else {
+        header.style.boxShadow = "none";
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>
