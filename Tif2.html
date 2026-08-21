@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mr. Iftekhar | Digital Marketing Expert</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@600;700;800&display=swap');
+
+:root{
+  --yellow:#FFD319;
+  --darkyellow:#B88600;
+  --blue:#146CFF;
+  --darkblue:#123A70;
+  --red:#D71920;
+  --purple:#7B2CFF;
+  --orange:#FF7A00;
+  --cyan:#00A9C7;
+  --cream:#FFF8E7;
+  --lightblue:#EEF5FF;
+  --text:#17324D;
+  --muted:#3F5E78;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"Outfit",sans-serif;
+  background:var(--cream);
+  color:var(--text);
+  overflow-x:hidden;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+}
+
+/* ================= TOP PROFILE ================= */
+
+.top-profile{
+  background:linear-gradient(90deg,#FFD319,#FFC107,#FFB300);
+  padding:12px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  border-bottom:4px solid var(--blue);
+}
+
+.top-name{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.top-name strong{
+  font-size:24px;
+  font-weight:900;
+  color:var(--darkblue);
+}
+
+.top-title{
+  background:var(--blue);
+  color:#fff;
+  padding:6px 14px;
+  border-radius:30px;
+  font-size:14px;
+  font-weight:800;
+}
+
+.top-whatsapp{
+  background:var(--red);
+  color:#fff;
+  padding:10px 18px;
+  border-radius:12px;
+  font-weight:900;
+  box-shadow:0 8px 20px rgba(215,25,32,.25);
+  transition:.3s;
+}
+
+.top-whatsapp:hover{
+  transform:translateY(-3px);
+}
+
+/* ================= NAV ================= */
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#fff;
+  padding:17px 7%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:2px solid #DCE7F5;
+}
+
+.logo{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:25px;
+  font-weight:900;
+  color:var(--blue);
+}
+
+.logo span{
+  color:var(--red);
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+.nav-links a{
+  color:var(--darkblue);
+  font-weight:800;
+  font-size:14px;
+}
+
+.nav-links a:hover{
+  color:var(--red);
+}
+
+.nav-contact{
+  background:var(--yellow);
+  padding:9px 15px;
+  border-radius:10px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  min-height:680px;
+  padding:80px 7%;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  background:
+  radial-gradient(circle at 10% 20%,rgba(255,211,25,.65),transparent 24%),
+  radial-gradient(circle at 90% 30%,rgba(20,108,255,.20),transparent 25%),
+  linear-gradient(135deg,#F5F9FF,#FFF7DE);
+}
+
+.hero-content{
+  max-width:900px;
+  position:relative;
+  z-index:2;
+}
+
+.hero-badge{
+  display:inline-block;
+  background:var(--red);
+  color:#fff;
+  padding:9px 17px;
+  border-radius:50px;
+  font-weight:900;
+  font-size:14px;
+  margin-bottom:22px;
+}
+
+.hero h1{
+  font-size:clamp(52px,8vw,100px);
+  line-height:.95;
+  letter-spacing:-3px;
+  color:var(--darkblue);
+  font-weight:900;
+}
+
+.hero h1 span{
+  color:var(--blue);
+}
+
+.hero h1 .highlight{
+  color:var(--orange);
+}
+
+.hero p{
+  max-width:750px;
+  margin:28px 0;
+  color:var(--muted);
+  font-size:19px;
+  font-weight:600;
+}
+
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+}
+
+.btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  padding:15px 23px;
+  border-radius:14px;
+  font-weight:900;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-4px);
+}
+
+.btn-blue{
+  background:var(--blue);
+  color:#fff;
+  box-shadow:0 12px 25px rgba(20,108,255,.25);
+}
+
+.btn-red{
+  background:var(--red);
+  color:#fff;
+}
+
+.hero-shape{
+  position:absolute;
+  border-radius:50%;
+  opacity:.8;
+}
+
+.shape-one{
+  width:170px;
+  height:170px;
+  background:var(--yellow);
+  right:8%;
+  top:13%;
+}
+
+.shape-two{
+  width:100px;
+  height:100px;
+  background:var(--purple);
+  right:25%;
+  bottom:12%;
+}
+
+.shape-three{
+  width:75px;
+  height:75px;
+  background:var(--cyan);
+  right:6%;
+  bottom:35%;
+}
+
+/* ================= GENERAL ================= */
+
+section{
+  padding:85px 7%;
+}
+
+.section-tag{
+  display:inline-block;
+  background:var(--purple);
+  color:#fff;
+  padding:8px 16px;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:900;
+}
+
+.section-title{
+  margin:15px 0 35px;
+  font-size:clamp(36px,5vw,58px);
+  line-height:1;
+  font-weight:900;
+  color:var(--darkblue);
+}
+
+.container{
+  max-width:1300px;
+  margin:auto;
+}
+
+/* ================= ABOUT ================= */
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1.3fr .8fr;
+  gap:28px;
+}
+
+.about-card,
+.info-card{
+  padding:35px;
+  border-radius:26px;
+  background:#fff;
+  box-shadow:0 15px 40px rgba(20,108,255,.10);
+}
+
+.about-card{
+  border-top:8px solid var(--yellow);
+}
+
+.about-card p{
+  font-size:18px;
+  color:var(--muted);
+  font-weight:600;
+}
+
+.info-card{
+  background:linear-gradient(135deg,var(--blue),var(--purple));
+  color:#fff;
+}
+
+.info-card h3{
+  color:var(--yellow);
+  font-size:27px;
+  margin-bottom:20px;
+}
+
+.info-list{
+  display:grid;
+  gap:12px;
+}
+
+.info-list div{
+  background:rgba(255,255,255,.16);
+  padding:13px;
+  border-radius:12px;
+  font-weight:700;
+}
+
+/* ================= STATS ================= */
+
+.stats{
+  margin-top:28px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.stat{
+  padding:22px;
+  border-radius:18px;
+  color:#fff;
+}
+
+.stat:nth-child(1){background:var(--blue);}
+.stat:nth-child(2){background:var(--red);}
+.stat:nth-child(3){background:var(--purple);}
+.stat:nth-child(4){background:var(--orange);}
+
+.stat h2{
+  font-size:35px;
+}
+
+.stat p{
+  color:#fff;
+  font-size:14px;
+}
+
+/* ================= EXPERIENCE ================= */
+
+.experience-section{
+  background:var(--lightblue);
+}
+
+.timeline{
+  display:grid;
+  gap:20px;
+}
+
+.job{
+  background:#fff;
+  padding:28px;
+  border-radius:22px;
+  border-left:8px solid var(--blue);
+  box-shadow:0 10px 30px rgba(23,50,77,.08);
+  transition:.3s;
+}
+
+.job:hover{
+  transform:translateX(7px);
+}
+
+.job:nth-child(2n){
+  border-left-color:var(--red);
+}
+
+.job:nth-child(3n){
+  border-left-color:var(--purple);
+}
+
+.job-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.job h3{
+  color:var(--darkblue);
+  font-size:23px;
+}
+
+.job h4{
+  color:var(--red);
+  margin-top:4px;
+}
+
+.date{
+  background:var(--yellow);
+  color:var(--darkblue);
+  padding:8px 14px;
+  border-radius:30px;
+  font-weight:900;
+}
+
+.job ul{
+  margin:18px 0 0 20px;
+  color:var(--muted);
+  font-weight:600;
+}
+
+/* ================= SKILLS ================= */
+
+.skills-section{
+  background:linear-gradient(135deg,#FFF5D6,#EEF5FF);
+}
+
+.skills-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.skill{
+  padding:12px 18px;
+  border-radius:50px;
+  color:#fff;
+  font-weight:900;
+}
+
+.skill:nth-child(4n+1){background:var(--blue);}
+.skill:nth-child(4n+2){background:var(--red);}
+.skill:nth-child(4n+3){background:var(--purple);}
+.skill:nth-child(4n+4){background:var(--orange);}
+
+/* ================= SOCIAL MEDIA TABLE ================= */
+
+.social-section{
+  background:#FFF9E8;
+}
+
+.table-box{
+  overflow-x:auto;
+  border-radius:22px;
+  background:#fff;
+  box-shadow:0 15px 40px rgba(20,108,255,.12);
+}
+
+.social-table{
+  width:100%;
+  min-width:800px;
+  border-collapse:collapse;
+}
+
+.social-table th{
+  background:linear-gradient(90deg,var(--blue),var(--purple));
+  color:#fff;
+  padding:18px;
+  text-align:left;
+  font-weight:900;
+}
+
+.social-table td{
+  padding:18px;
+  color:var(--text);
+  font-weight:650;
+  border-bottom:1px solid #DCE7F5;
+}
+
+.social-table tr:nth-child(even){
+  background:#FFF8DE;
+}
+
+.social-table tr:hover{
+  background:#EAF3FF;
+}
+
+/* ================= PORTFOLIO ================= */
+
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.project{
+  background:#fff;
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:0 15px 35px rgba(23,50,77,.10);
+  transition:.35s;
+}
+
+.project:hover{
+  transform:translateY(-9px);
+}
+
+.project-top{
+  height:145px;
+  padding:25px;
+  display:flex;
+  align-items:flex-end;
+  color:#fff;
+  font-size:25px;
+  font-weight:900;
+}
+
+.project:nth-child(5n+1) .project-top{
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+}
+
+.project:nth-child(5n+2) .project-top{
+  background:linear-gradient(135deg,var(--red),var(--orange));
+}
+
+.project:nth-child(5n+3) .project-top{
+  background:linear-gradient(135deg,var(--purple),var(--blue));
+}
+
+.project:nth-child(5n+4) .project-top{
+  background:linear-gradient(135deg,var(--orange),var(--darkyellow));
+}
+
+.project:nth-child(5n) .project-top{
+  background:linear-gradient(135deg,var(--cyan),var(--purple));
+}
+
+.project-body{
+  padding:22px;
+}
+
+.project-body p{
+  color:var(--muted);
+  font-weight:600;
+  margin:10px 0 18px;
+}
+
+.project-link{
+  color:var(--red);
+  font-weight:900;
+}
+
+/* ================= EDUCATION ================= */
+
+.edu-card{
+  max-width:650px;
+  background:linear-gradient(135deg,var(--yellow),#FFBE0B);
+  padding:35px;
+  border-radius:25px;
+  box-shadow:0 15px 35px rgba(255,190,11,.25);
+}
+
+.edu-card h3{
+  color:var(--darkblue);
+  font-size:29px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+  background:linear-gradient(135deg,var(--blue),var(--purple));
+  color:#fff;
+  text-align:center;
+}
+
+.contact .section-title{
+  color:#fff;
+}
+
+.contact-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:14px;
+}
+
+.contact-item{
+  background:rgba(255,255,255,.16);
+  color:#fff;
+  padding:15px 20px;
+  border-radius:13px;
+  font-weight:800;
+}
+
+/* ================= WHATSAPP POPUP ================= */
+
+.whatsapp-popup{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  width:330px;
+  padding:24px;
+  border-radius:24px;
+  background:linear-gradient(135deg,var(--blue),var(--purple));
+  color:#fff;
+  z-index:9999;
+  box-shadow:0 20px 50px rgba(20,108,255,.35);
+  transform:translateY(160%);
+  transition:.6s ease;
+}
+
+.whatsapp-popup.show{
+  transform:translateY(0);
+}
+
+.popup-close{
+  position:absolute;
+  top:8px;
+  right:13px;
+  background:transparent;
+  border:0;
+  color:#fff;
+  font-size:27px;
+  cursor:pointer;
+}
+
+.popup-icon{
+  font-size:42px;
+}
+
+.whatsapp-popup h3{
+  color:var(--yellow);
+  font-size:25px;
+  margin:8px 0;
+}
+
+.whatsapp-popup p{
+  color:#fff;
+  font-weight:600;
+  margin-bottom:18px;
+}
+
+.popup-btn{
+  display:block;
+  background:var(--yellow);
+  color:var(--darkblue);
+  text-align:center;
+  padding:13px;
+  border-radius:12px;
+  font-weight:900;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:linear-gradient(90deg,var(--red),var(--purple),var(--blue));
+  color:#fff;
+  padding:25px;
+  text-align:center;
+  font-weight:800;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .portfolio-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+
+  .top-profile{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .top-name{
+    justify-content:center;
+  }
+
+  section,
+  .hero{
+    padding:65px 6%;
+  }
+
+  .portfolio-grid,
+  .stats{
+    grid-template-columns:1fr;
+  }
+
+  .whatsapp-popup{
+    width:calc(100% - 30px);
+    right:15px;
+    bottom:15px;
+  }
+
+  .hero h1{
+    letter-spacing:-2px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP PROFILE -->
+
+<div class="top-profile">
+
+  <div class="top-name">
+    <strong>Mr. IFTEKHAR</strong>
+    <span class="top-title">Digital Marketing Expert</span>
+  </div>
+
+  <a href="https://wa.me/9181281177882" class="top-whatsapp" target="_blank">
+    💬 WhatsApp: 81281177882
+  </a>
+
+</div>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+  <a href="#" class="logo">
+    IFTE<span>KHAR</span>
+  </a>
+
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#social">Social Work</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact" class="nav-contact">Contact</a>
+  </div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+  <div class="hero-badge">
+    DIGITAL MARKETING • SEO • AI • WEBSITE DEVELOPMENT
+  </div>
+
+  <h1>
+    MR.<br>
+    <span>IFTEKHAR.</span><br>
+    <span class="highlight">DIGITAL EXPERT</span>
+  </h1>
+
+  <p>
+    Digital Marketing Professional and Trainer with 8+ years of IT experience
+    across SEO, digital marketing, training, website development, social media,
+    AI tools, WordPress, coding, hosting and ChatGPT workflows.
+  </p>
+
+  <div class="hero-buttons">
+
+    <a href="#portfolio" class="btn btn-blue">
+      VIEW MY PORTFOLIO ↓
+    </a>
+
+    <a href="https://wa.me/9181281177882" target="_blank" class="btn btn-red">
+      💬 CHAT ON WHATSAPP
+    </a>
+
+  </div>
+
+</div>
+
+<div class="hero-shape shape-one"></div>
+<div class="hero-shape shape-two"></div>
+<div class="hero-shape shape-three"></div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container">
+
+<span class="section-tag">ABOUT ME</span>
+
+<h2 class="section-title">
+Digital Marketing + AI + Technology
+</h2>
+
+<div class="about-grid">
+
+<div class="about-card">
+
+<p>
+Digital Marketing professional and trainer with 8+ years of IT experience
+across SEO, digital marketing, training, website development, social media
+and AI tools.
+</p>
+
+<br>
+
+<p>
+Practical experience in SEO, ASO, paid advertising, content creation,
+analytics, WordPress/WooCommerce, coding, live hosting and ChatGPT workflows.
+</p>
+
+<div class="stats">
+
+<div class="stat">
+<h2>8+</h2>
+<p>Years Experience</p>
+</div>
+
+<div class="stat">
+<h2>11+</h2>
+<p>Live Projects</p>
+</div>
+
+<div class="stat">
+<h2>SEO</h2>
+<p>Core Expertise</p>
+</div>
+
+<div class="stat">
+<h2>AI</h2>
+<p>Modern Tools</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="info-card">
+
+<h3>Professional Details</h3>
+
+<div class="info-list">
+
+<div>📍 Mumbai, Maharashtra, India</div>
+
+<div>📱 81281177882</div>
+
+<div>📧 iftekhar1708@gmail.com</div>
+
+<div>💼 Digital Marketing Expert</div>
+
+<div>🌐 SEO • AI • Web Development</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience" class="experience-section">
+
+<div class="container">
+
+<span class="section-tag">CAREER JOURNEY</span>
+
+<h2 class="section-title">
+Professional Experience
+</h2>
+
+<div class="timeline">
+
+<div class="job">
+
+<div class="job-head">
+
+<div>
+<h3>Define Digital – Ghatkopar</h3>
+<h4>Freelancer – Website & Digital Marketing</h4>
+</div>
+
+<div class="date">Jun 2026 – Currently</div>
+
+</div>
+
+<ul>
+<li>Website work, WordPress, coding and live hosting.</li>
+<li>Website SEO, Social Media, AI and ChatGPT prompt work.</li>
+</ul>
+
+</div>
+
+<div class="job">
+
+<div class="job-head">
+
+<div>
+<h3>Net Tech India – Thane</h3>
+<h4>Digital Marketing / SEO</h4>
+</div>
+
+<div class="date">Aug 2025 – May 2026</div>
+
+</div>
+
+<ul>
+<li>On-page SEO and Off-page SEO.</li>
+<li>Meta Ads, Google Ads, ChatGPT prompting, Canva, WooCommerce and Content Creation.</li>
+</ul>
+
+</div>
+
+<div class="job">
+
+<div class="job-head">
+
+<div>
+<h3>Kerti & Web AI Academy – Thane</h3>
+<h4>Digital Marketing Trainer</h4>
+</div>
+
+<div class="date">Jan 2025 – Jul 2025</div>
+
+</div>
+
+<ul>
+<li>Professional digital marketing classes and practical training.</li>
+<li>SEO, paid ads, content creation and marketing tools.</li>
+</ul>
+
+</div>
+
+<div class="job">
+
+<div class="job-head">
+
+<div>
+<h3>RiseOn Infotech – Academy</h3>
+<h4>Digital Marketing Trainer</h4>
+</div>
+
+<div class="date">Mar 2022 – Dec 2024</div>
+
+</div>
+
+<ul>
+<li>Full digital marketing programs and hands-on live-project training.</li>
+</ul>
+
+</div>
+
+<div class="job">
+
+<div class="job-head">
+
+<div>
+<h3>Anques Technolab</h3>
+<h4>Digital Marketing Manager</h4>
+</div>
+
+<div class="date">Jan 2023 – Apr 2024</div>
+
+</div>
+
+<ul>
+<li>Digital marketing management.</li>
+<li>Web/app development and digital-service exposure.</li>
+</ul>
+
+</div>
+
+<div class="job">
+
+<div class="job-head">
+
+<div>
+<h3>Actiza Infotech</h3>
+<h4>SEO Manager</h4>
+</div>
+
+<div class="date">Dates Not Specified</div>
+
+</div>
+
+<ul>
+<li>Handled 2–3 websites.</li>
+<li>On-page SEO, Off-page SEO and International SEO.</li>
+</ul>
+
+</div>
+
+<div class="job">
+
+<div class="job-head">
+
+<div>
+<h3>Merind Infotech</h3>
+<h4>SEO & Website Coding</h4>
+</div>
+
+<div class="date">Aug 2018 – Dec 2019</div>
+
+</div>
+
+<ul>
+<li>SEO, Off-page SEO and website coding work.</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills" class="skills-section">
+
+<div class="container">
+
+<span class="section-tag">CORE EXPERTISE</span>
+
+<h2 class="section-title">
+Professional Skills
+</h2>
+
+<div class="skills-grid">
+
+<div class="skill">SEO</div>
+<div class="skill">On-page SEO</div>
+<div class="skill">Off-page SEO</div>
+<div class="skill">ASO</div>
+<div class="skill">Meta Ads</div>
+<div class="skill">Google Ads</div>
+<div class="skill">Social Media</div>
+<div class="skill">Content Creation</div>
+<div class="skill">WordPress</div>
+<div class="skill">WooCommerce</div>
+<div class="skill">Website Coding</div>
+<div class="skill">Live Hosting</div>
+<div class="skill">ChatGPT Prompting</div>
+<div class="skill">AI Tools</div>
+<div class="skill">Canva</div>
+<div class="skill">Analytics</div>
+<div class="skill">Google Search Console</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SOCIAL MEDIA EXPERIENCE -->
+
+<section id="social" class="social-section">
+
+<div class="container">
+
+<span class="section-tag">SOCIAL MEDIA WORK</span>
+
+<h2 class="section-title">
+Company & Social Media Experience
+</h2>
+
+<div class="table-box">
+
+<table class="social-table">
+
+<thead>
+
+<tr>
+<th>Company / Brand</th>
+<th>Work</th>
+<th>Social Platforms</th>
+<th>Market / Details</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+<td><strong>USA Social Media Accounts</strong></td>
+<td>Instagram & Facebook Account Management</td>
+<td>📸 Instagram &nbsp; 🔵 Facebook</td>
+<td>USA Market</td>
+</tr>
+
+<tr>
+<td><strong>Arrowmeds</strong></td>
+<td>Social Media Handling & Content Management</td>
+<td>📸 Instagram &nbsp; 🔵 Facebook</td>
+<td>Digital Marketing</td>
+</tr>
+
+<tr>
+<td><strong>Recastle.in</strong></td>
+<td>Website & Social Media Handling</td>
+<td>📸 Instagram &nbsp; 🔵 Facebook</td>
+<td>India</td>
+</tr>
+
+<tr>
+<td><strong>S2Soft Solutions</strong></td>
+<td>Company Social Media Management</td>
+<td>📸 Instagram &nbsp; 🔵 Facebook</td>
+<td>Company Branding</td>
+</tr>
+
+<tr>
+<td><strong>Anques Technolab</strong></td>
+<td>Social Media Handling & Digital Marketing</td>
+<td>📸 Instagram &nbsp; 🔵 Facebook</td>
+<td>Digital Marketing</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PORTFOLIO -->
+
+<section id="portfolio">
+
+<div class="container">
+
+<span class="section-tag">LIVE PROJECTS</span>
+
+<h2 class="section-title">
+Work Portfolio
+</h2>
+
+<div class="portfolio-grid">
+
+<div class="project">
+<div class="project-top">FLICKO</div>
+<div class="project-body">
+<p>WordPress website project.</p>
+<a href="https://flicko.totalh.net/" target="_blank" class="project-link">VIEW LIVE PROJECT →</a>
+</div>
+</div>
+
+<div class="project">
+<div class="project-top">FLIZZO</div>
+<div class="project-body">
+<p>Coding and hosting project.</p>
+<a href="https://flizzo.vercel.app" target="_blank" class="project-link">VIEW LIVE PROJECT →</a>
+</div>
+</div>
+
+<div class="project">
+<div class="project-top">MAX SALON Z</div>
+<div class="project-body">
+<p>Coding and live hosting project.</p>
+<a href="https://maxsalonz.vercel.app" target="_blank" class="project-link">VIEW LIVE PROJECT →</a>
+</div>
+</div>
+
+<div class="project">
+<div class="project-top">OLD CARZ</div>
+<div class="project-body">
+<p>Used car marketplace website project.</p>
+<a href="https://oldcarz.vercel.app" target="_blank" class="project-link">VIEW LIVE PROJECT →</a>
+</div>
+</div>
+
+<div class="project">
+<div class="project-top">RISEON INFOTECH</div>
+<div class="project-body">
+<p>Website coding and hosting project.</p>
+<a href="https://riseon-infotech1.vercel.app/" target="_blank" class="project-link">VIEW LIVE PROJECT →</a>
+</div>
+</div>
+
+<div class="project">
+<div class="project-top">WADALA PIZZA</div>
+<div class="project-body">
+<p>Restaurant and online ordering website.</p>
+<a href="http://wadalapizzaa.vercel.app/" target="_blank" class="project-link">VIEW LIVE PROJECT →</a>
+</div>
+</div>
+
+<div class="project">
+<div class="project-top">INSTA CLONE</div>
+<div class="project-body">
+<p>AI website project.</p>
+<a href="https://insta-clone--mixeci1216.replit.app/home/" target="_blank" class="project-link">VIEW LIVE PROJECT →</a>
+</div>
+</div>
+
+<div class="project">
+<div class="project-top">KAPODARA CLINIC</div>
+<div class="project-body">
+<p>AI-powered website project.</p>
+<a href="https://kapodara-clinic-421107066400.asia-southeast1.run.app/" target="_blank" class="project-link">VIEW LIVE PROJECT →</a>
+</div>
+</div>
+
+<div class="project">
+<div class="project-top">AI MY CARRYMAN</div>
+<div class="project-body">
+<p>AI website project.</p>
+<a href="https://aimycarryman.vercel.app/" target="_blank" class="project-link">VIEW LIVE PROJECT →</a>
+</div>
+</div>
+
+<div class="project">
+<div class="project-top">WADALA MY PIZZA</div>
+<div class="project-body">
+<p>AI website project.</p>
+<a href="https://wadala-mypizza.vercel.app/" target="_blank" class="project-link">VIEW LIVE PROJECT →</a>
+</div>
+</div>
+
+<div class="project">
+<div class="project-top">BENZ</div>
+<div class="project-body">
+<p>AI website project.</p>
+<a href="https://benz.callbell.shop/" target="_blank" class="project-link">VIEW LIVE PROJECT →</a>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TOOLS -->
+
+<section class="skills-section">
+
+<div class="container">
+
+<span class="section-tag">MY TOOLKIT</span>
+
+<h2 class="section-title">
+Tools & Platforms
+</h2>
+
+<div class="skills-grid">
+
+<div class="skill">ChatGPT</div>
+<div class="skill">Perplexity.ai</div>
+<div class="skill">Ubersuggest</div>
+<div class="skill">Keywords Everywhere</div>
+<div class="skill">MozBar</div>
+<div class="skill">Microsoft Clarity</div>
+<div class="skill">Google Play Console</div>
+<div class="skill">Sensor Tower</div>
+<div class="skill">Data.io</div>
+<div class="skill">Quetext</div>
+<div class="skill">Grexa AI GBP Booster</div>
+<div class="skill">Canva</div>
+<div class="skill">Lovart.io</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section>
+
+<div class="container">
+
+<span class="section-tag">EDUCATION</span>
+
+<h2 class="section-title">
+Academic Background
+</h2>
+
+<div class="edu-card">
+
+<h3>MCA — Pune University</h3>
+
+<p>Master of Computer Applications</p>
+
+<br>
+
+<strong>2014 – 2016</strong>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- LANGUAGES -->
+
+<section class="skills-section">
+
+<div class="container">
+
+<span class="section-tag">LANGUAGES</span>
+
+<h2 class="section-title">
+Communication Skills
+</h2>
+
+<div class="skills-grid">
+
+<div class="skill">Hindi</div>
+<div class="skill">English</div>
+<div class="skill">Gujarati</div>
+<div class="skill">Urdu</div>
+<div class="skill">Arabic</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+<div class="container">
+
+<span class="section-tag">LET'S CONNECT</span>
+
+<h2 class="section-title">
+Let's Build Something Digital.
+</h2>
+
+<div class="contact-grid">
+
+<a href="tel:81281177882" class="contact-item">
+📱 81281177882
+</a>
+
+<a href="mailto:iftekhar1708@gmail.com" class="contact-item">
+📧 iftekhar1708@gmail.com
+</a>
+
+<a href="https://wa.me/9181281177882" target="_blank" class="contact-item">
+💬 WhatsApp Me
+</a>
+
+<div class="contact-item">
+📍 Mumbai, Maharashtra, India
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+© 2026 Mr. IFTEKHAR • DIGITAL MARKETING EXPERT • SEO • AI • WEB DEVELOPMENT
+</footer>
+
+<!-- WHATSAPP POPUP -->
+
+<div class="whatsapp-popup" id="whatsappPopup">
+
+<button class="popup-close" onclick="closePopup()">×</button>
+
+<div class="popup-icon">💬</div>
+
+<h3>Let's Work Together!</h3>
+
+<p>
+SEO • Digital Marketing • Social Media • AI • Website Development
+</p>
+
+<a href="https://wa.me/9181281177882" target="_blank" class="popup-btn">
+CHAT ON WHATSAPP
+</a>
+
+</div>
+
+<script>
+
+setTimeout(function(){
+  document.getElementById("whatsappPopup").classList.add("show");
+},1500);
+
+function closePopup(){
+  document.getElementById("whatsappPopup").style.display="none";
+}
+
+</script>
+
+</body>
+</html>
